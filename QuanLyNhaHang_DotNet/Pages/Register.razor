@@ -1,0 +1,182 @@
+﻿@page "/register"
+@using System.ComponentModel.DataAnnotations
+@using System.Net.Http.Json
+
+@inject HttpClient Http
+@inject NavigationManager Navigation
+
+<style>
+    /* Thay thế jQuery fadeIn bằng CSS Animation thuần */
+    .fade-in-card {
+        animation: fadeInAnimation ease 0.8s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    @@keyframes fadeInAnimation {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+</style>
+
+<div class="container-fluid bg-light min-vh-100 d-flex align-items-center justify-content-center py-5">
+    <div class="row w-100 justify-content-center">
+        <div class="col-11 col-sm-10 col-md-8 col-lg-5">
+
+            <div class="card shadow-lg border-0 rounded-3 register-card fade-in-card">
+                <div class="card-body p-4 p-sm-5">
+
+                    <div class="text-center mb-4">
+                        <h3 class="fw-bold text-warning text-uppercase m-0">ĐĂNG KÝ TÀI KHOẢN</h3>
+                        <small class="text-muted d-block mt-1">Hệ thống vận hành & Kiểm soát định mức nhà hàng</small>
+                    </div>
+
+                    @* Dùng EditForm thay cho formGroup của Angular *@
+                    <EditForm Model="@registerModel" OnValidSubmit="HandleRegistration">
+                        <DataAnnotationsValidator />
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold text-secondary small">Họ và tên</label>
+                            <InputText @bind-Value="registerModel.HoTen" class="form-control border-2" placeholder="Nguyễn Văn A" />
+                            <ValidationMessage For="@(() => registerModel.HoTen)" class="text-danger small mt-1" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold text-secondary small">Địa chỉ Email</label>
+                            <InputText @bind-Value="registerModel.Email" type="email" class="form-control border-2" placeholder="example@gmail.com" />
+                            <ValidationMessage For="@(() => registerModel.Email)" class="text-danger small mt-1" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold text-secondary small">Số điện thoại</label>
+                            <InputText @bind-Value="registerModel.DienThoai" class="form-control border-2" placeholder="09xxxxxxxx" />
+                            <ValidationMessage For="@(() => registerModel.DienThoai)" class="text-danger small mt-1" />
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-semibold text-secondary small">Mật khẩu</label>
+                                <InputText @bind-Value="registerModel.MatKhau" type="password" class="form-control border-2" placeholder="******" />
+                                <ValidationMessage For="@(() => registerModel.MatKhau)" class="text-danger small mt-1" />
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label class="form-label fw-semibold text-secondary small">Nhập lại mật khẩu</label>
+                                <InputText @bind-Value="registerModel.NhapLaiMatKhau" type="password" class="form-control border-2" placeholder="******" />
+                                <ValidationMessage For="@(() => registerModel.NhapLaiMatKhau)" class="text-danger small mt-1" />
+                            </div>
+                        </div>
+
+                        @if (!string.IsNullOrEmpty(errorMessage))
+                        {
+                            <div class="alert alert-danger text-center p-2 small mb-3">
+                                @errorMessage
+                            </div>
+                        }
+
+                        @if (!string.IsNullOrEmpty(successMessage))
+                        {
+                            <div class="alert alert-success text-center p-2 small mb-3">
+                                @successMessage
+                            </div>
+                        }
+
+                        <button disabled="@isLoading" type="submit" class="btn btn-warning w-100 text-white fw-bold shadow-sm py-2">
+                            @if (isLoading)
+                            {
+                                <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                                <span>ĐANG TẠO TÀI KHOẢN...</span>
+                            }
+                            else
+                            {
+                                <span>ĐĂNG KÝ NGAY</span>
+                            }
+                        </button>
+
+                    </EditForm>
+
+                    <div class="text-center mt-4">
+                        <p class="small text-muted m-0">Bạn đã có tài khoản? <a href="/login" class="text-warning fw-semibold text-decoration-none">Đăng nhập ngay</a></p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@code {
+    // ViewModel dành riêng cho UI Form để bắt Validation (đặc biệt là biến Nhập lại mật khẩu)
+    private class RegisterFormModel
+    {
+        [Required(ErrorMessage = "Vui lòng nhập họ và tên.")]
+        public string HoTen { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Vui lòng nhập email.")]
+        [EmailAddress(ErrorMessage = "Email không hợp lệ (Ví dụ: abc@gmail.com).")]
+        public string Email { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Vui lòng nhập số điện thoại.")]
+        [RegularExpression("^[0-9]{10}$", ErrorMessage = "Số điện thoại phải gồm đúng 10 chữ số.")]
+        public string DienThoai { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Vui lòng nhập mật khẩu.")]
+        [MinLength(6, ErrorMessage = "Mật khẩu phải từ 6 ký tự trở lên")]
+        public string MatKhau { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Vui lòng nhập lại mật khẩu.")]
+        [Compare(nameof(MatKhau), ErrorMessage = "Mật khẩu xác nhận không trùng khớp.")]
+        public string NhapLaiMatKhau { get; set; } = string.Empty;
+    }
+
+    private RegisterFormModel registerModel = new();
+    private bool isLoading = false;
+    private string? errorMessage;
+    private string? successMessage;
+
+    // Tương đương với apiUrl trong AuthService của bạn
+    private readonly string apiUrl = "https://localhost:7043/api/auth/register";
+
+    private async Task HandleRegistration()
+    {
+        isLoading = true;
+        errorMessage = string.Empty;
+        successMessage = string.Empty;
+
+        // Map dữ liệu từ UI Model sang DTO chuẩn của Backend
+        var registerPayload = new RegisterRequest
+            {
+                HoTen = registerModel.HoTen,
+                Email = registerModel.Email,
+                DienThoai = registerModel.DienThoai,
+                MatKhau = registerModel.MatKhau
+            };
+
+        try
+        {
+            // Bắn Request lên API
+            var response = await Http.PostAsJsonAsync(apiUrl, registerPayload);
+            var result = await response.Content.ReadFromJsonAsync<AuthResponse>();
+
+            if (response.IsSuccessStatusCode && result != null && result.IsSuccess)
+            {
+                successMessage = result.Message ?? "Đăng ký tài khoản thành công!";
+                registerModel = new RegisterFormModel(); // Reset form
+            }
+            else
+            {
+                errorMessage = result?.Message ?? "Đăng ký thất bại. Dữ liệu không hợp lệ!";
+            }
+        }
+        catch (Exception ex)
+        {
+            // Bắt lỗi khi Backend chưa chạy hoặc mất mạng
+            errorMessage = "Lỗi kết nối đến máy chủ. Vui lòng thử lại sau.";
+            Console.WriteLine(ex.Message); // Tương tự console.log bên Angular
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+}

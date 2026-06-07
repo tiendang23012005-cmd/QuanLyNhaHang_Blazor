@@ -1,0 +1,167 @@
+﻿@page "/login"
+@using System.ComponentModel.DataAnnotations
+@using System.Text.Json
+
+@* Tiêm (Inject) các service cần thiết tương đương với Angular *@
+@inject HttpClient Http
+@inject NavigationManager Navigation
+@inject IJSRuntime JSRuntime
+
+<style>
+    /* Hiệu ứng CSS thay thế cho jQuery fadeIn */
+    .fade-in-card {
+        animation: fadeInAnimation ease 0.8s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    @@keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+</style>
+
+<div class="container-fluid bg-light min-vh-100 d-flex align-items-center justify-content-center">
+    <div class="row w-100 justify-content-center">
+        <div class="col-11 col-sm-8 col-md-6 col-lg-4">
+
+            <div class="card shadow-lg border-0 rounded-3 auth-card fade-in-card">
+                <div class="card-body p-4 p-sm-5">
+
+                    <div class="text-center mb-4">
+                        <h3 class="fw-bold text-warning text-uppercase m-0">QUẢN LÝ NHÀ HÀNG</h3>
+                        <small class="text-muted d-block mt-1">Hệ thống vận hành & Kiểm soát định mức</small>
+                    </div>
+
+                    <EditForm Model="@loginModel" OnValidSubmit="HandleLogin">
+                        <DataAnnotationsValidator />
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold text-secondary small">Tài khoản đăng nhập</label>
+                            <InputText @bind-Value="loginModel.Identifer" class="form-control border-2" placeholder="Email, SĐT hoặc Username" />
+                            <ValidationMessage For="@(() => loginModel.Identifer)" class="text-danger small mt-1" />
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold text-secondary small">Mật khẩu</label>
+                            <InputText @bind-Value="loginModel.MatKhau" type="password" class="form-control border-2" placeholder="******" />
+                            <ValidationMessage For="@(() => loginModel.MatKhau)" class="text-danger small mt-1" />
+                        </div>
+
+                        @if (!string.IsNullOrEmpty(errorMessage))
+                        {
+                            <div class="alert alert-danger text-center p-2 small mb-3">
+                                @errorMessage
+                            </div>
+                        }
+
+                        <button disabled="@isLoading" type="submit" class="btn btn-warning w-100 text-white fw-bold shadow-sm py-2">
+                            @if (isLoading)
+                            {
+                                <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                                <span>ĐANG XỬ LÝ...</span>
+                            }
+                            else
+                            {
+                                <span>ĐĂNG NHẬP</span>
+                            }
+                        </button>
+
+                    </EditForm>
+
+                    <div class="text-center mt-4">
+                        <p class="small text-muted mb-1">Bạn chưa có tài khoản? <a href="/register" class="text-warning fw-semibold text-decoration-none">Đăng ký mới</a></p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@code {
+    // ViewModel cho Form Đăng nhập
+    private class LoginFormModel
+    {
+        [Required(ErrorMessage = "Tài khoản không được để trống.")]
+        public string Identifer { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Vui lòng nhập mật khẩu.")]
+        [MinLength(6, ErrorMessage = "Mật khẩu phải chứa ít nhất 6 ký tự.")]
+        public string MatKhau { get; set; } = string.Empty;
+    }
+
+    private LoginFormModel loginModel = new();
+    private bool isLoading = false;
+    private string? errorMessage;
+
+    private async Task HandleLogin()
+    {
+        isLoading = true;
+        errorMessage = string.Empty;
+
+        var loginPayload = new LoginRequest
+            {
+                Identifer = loginModel.Identifer,
+                MatKhau = loginModel.MatKhau
+            };
+
+        try
+        {
+            // Do bạn đã cấu hình BaseAddress ở Program.cs, ta chỉ cần gọi URI tương đối
+            var response = await Http.PostAsJsonAsync("api/auth/login", loginPayload);
+            var result = await response.Content.ReadFromJsonAsync<AuthResponse>();
+
+            if (response.IsSuccessStatusCode && result != null && result.IsSuccess)
+            {
+                // Gọi hàm alert của Javascript
+                await JSRuntime.InvokeVoidAsync("alert", "Đăng nhập thành công");
+
+                // Tạo object UserSession y hệt như bên TypeScript
+                var userSession = new
+                {
+                    fullName = result.FullName,
+                    role = result.Role,
+                    token = result.Token
+                };
+
+                // Chuyển object thành chuỗi JSON và lưu vào LocalStorage qua JS Interop
+                string sessionJson = JsonSerializer.Serialize(userSession);
+                await JSRuntime.InvokeVoidAsync("localStorage.setItem", "currentUser", sessionJson);
+
+                // Điều hướng (Routing) dựa trên Role
+                if (result.Role == "Admin")
+                {
+                    Navigation.NavigateTo("/admin");
+                }
+                else if (result.Role == "Nhà bếp" || result.Role == "Phục vụ")
+                {
+                    Navigation.NavigateTo("/staff");
+                }
+                else
+                {
+                    Navigation.NavigateTo("/customer");
+                }
+            }
+            else
+            {
+                errorMessage = result?.Message ?? "Tài khoản hoặc mật khẩu không chính xác.";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = "Lỗi kết nối đến máy chủ. Vui lòng thử lại.";
+            Console.WriteLine(ex.Message);
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+}
