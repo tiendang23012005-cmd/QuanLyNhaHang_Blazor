@@ -1,0 +1,313 @@
+﻿@page "/admin/food-management"
+@layout AdminLayout
+@using RestaurantManagement.Frontend.Models
+@using System.Net.Http.Json
+@inject HttpClient Http
+@inject IJSRuntime JS
+
+<div class="food-container">
+
+    <div class="header">
+        <div>
+            <small>QUẢN LÝ MÓN ĂN</small>
+            @if (isCreateMode)
+            {
+                <h2>Thêm món ăn</h2>
+                <p>Nhập thông tin món ăn mới vào thực đơn</p>
+            }
+            else if (isEditMode)
+            {
+                <h2>Cập nhật món ăn</h2>
+                <p>Chỉnh sửa thông tin món ăn hiện tại</p>
+            }
+            else
+            {
+                <h2>Danh sách món ăn</h2>
+                <p>Quản lý thực đơn nhà hàng</p>
+            }
+        </div>
+
+        @if (!isCreateMode && !isEditMode)
+        {
+            <button type="button" class="add-btn" @onclick="OpenCreateForm">
+                🍽 + Thêm món
+            </button>
+        }
+    </div>
+
+    @if (!isCreateMode && !isEditMode)
+    {
+        <input class="search-box"
+               type="text"
+               placeholder="Tìm kiếm món ăn..."
+               @bind="SearchText"
+               @bind:event="oninput" />
+
+        <div class="food-grid">
+            @foreach (var food in FilteredFoods)
+            {
+                <div class="food-card">
+                    <div class="food-image">@food.HinhAnh</div>
+                    <h3>@food.TenMon</h3>
+                    <p>@food.LoaiMon</p>
+                    <div class="price">@food.Gia.ToString("N0") đ</div>
+
+                    <span class="status @(food.TrangThai ? "active" : "inactive")">
+                        @(food.TrangThai ? "Còn bán" : "Hết món")
+                    </span>
+
+                    <div class="actions">
+                        <button type="button" class="edit-btn" @onclick="() => OpenEditForm(food.MaMon)">
+                            Sửa
+                        </button>
+                        <button type="button" class="delete-btn" @onclick="() => DeleteFood(food)">
+                            Xóa
+                        </button>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="food-form">
+            <EditForm Model="foodForm" OnValidSubmit="HandleValidSubmit">
+                <DataAnnotationsValidator />
+
+                <div class="form-group">
+                    <label>Tên món ăn</label>
+                    <InputText placeholder="Ví dụ: Trà chanh" @bind-Value="foodForm.TenMonAn" />
+                    <ValidationMessage For="() => foodForm.TenMonAn" class="text-danger" />
+                </div>
+
+                <div class="form-group">
+                    <label>Danh mục món ăn</label>
+                    <InputSelect @bind-Value="foodForm.MaDanhMuc">
+                        <option value="1">Món chính</option>
+                        <option value="2">Nước uống</option>
+                        <option value="3">Tráng miệng</option>
+                        <option value="4">Thức ăn nhanh</option>
+                    </InputSelect>
+                    <ValidationMessage For="() => foodForm.MaDanhMuc" class="text-danger" />
+                </div>
+
+                <div class="form-group">
+                    <label>Giá (đ)</label>
+                    <InputNumber placeholder="Ví dụ: 25000" @bind-Value="foodForm.Gia" />
+                    <ValidationMessage For="() => foodForm.Gia" class="text-danger" />
+                </div>
+
+                <div class="form-group">
+                    <label>Mô tả</label>
+                    <InputTextArea placeholder="Nhập mô tả món ăn..." @bind-Value="foodForm.MoTa" />
+                    <ValidationMessage For="() => foodForm.MoTa" class="text-danger" />
+                </div>
+
+                <div class="form-group">
+                    <label>Hình ảnh (emoji)</label>
+                    <InputText placeholder="Ví dụ: 🍜" @bind-Value="foodForm.HinhAnh" />
+                    <ValidationMessage For="() => foodForm.HinhAnh" class="text-danger" />
+                </div>
+
+                <div class="checkbox">
+                    <InputCheckbox @bind-Value="foodForm.ConBan" />
+                    <span>Còn bán</span>
+                </div>
+
+                <div class="form-actions-group">
+                    <button type="button" class="cancel-btn" @onclick="CloseForm" disabled="@isLoading">
+                        Hủy
+                    </button>
+                    <button type="submit" class="save-btn" disabled="@isLoading">
+                        @if (isLoading)
+                        {
+                            <span>⏳ Đang xử lý...</span>
+                        }
+                        else
+                        {
+                            <span>@(isCreateMode ? "Lưu" : "Cập nhật")</span>
+                        }
+                    </button>
+                </div>
+            </EditForm>
+        </div>
+    }
+</div>
+
+@code {
+    private string SearchText { get; set; } = string.Empty;
+    private List<FoodViewModel> foods = new();
+    private FoodFormModel foodForm = new();
+
+    private int currentFoodId = 0;
+    private bool isCreateMode = false;
+    private bool isEditMode = false;
+    private bool isLoading = false;
+    private const string ApiUrl = "https://localhost:7043/api/FoodManagement";
+
+    // Tính toán bộ lọc giống get FilteredFoods() bên Angular
+    private IEnumerable<FoodViewModel> FilteredFoods => foods
+        .Where(f => string.IsNullOrEmpty(SearchText) ||
+                    f.TenMon.Contains(SearchText, StringComparison.OrdinalIgnoreCase));
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadFoods();
+    }
+
+    private async Task LoadFoods()
+    {
+        try
+        {
+            var rawData = await Http.GetFromJsonAsync<List<FoodApiResponse>>(ApiUrl);
+            if (rawData != null)
+            {
+                // Thực hiện map dữ liệu từ API thô ra ViewModel hiển thị như Angular
+                foods = rawData.Select(x => new FoodViewModel
+                    {
+                        MaMon = x.MaMonAn,
+                        TenMon = x.TenMonAn,
+                        LoaiMon = x.DanhMuc,
+                        Gia = x.Gia,
+                        HinhAnh = !string.IsNullOrEmpty(x.HinhAnh) ? x.HinhAnh : x.DanhMuc switch
+                        {
+                            "Món chính" => "🍛",
+                            "Nước uống" => "🥤",
+                            "Tráng miệng" => "🍰",
+                            "Thức ăn nhanh" => "🍟",
+                            _ => "🍽"
+                        },
+                        TrangThai = x.ConBan
+                    }).ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            await JS.InvokeVoidAsync("alert", "Không tải được danh sách món ăn");
+        }
+    }
+
+    private void OpenCreateForm()
+    {
+        foodForm = new FoodFormModel(); // Reset form
+        isCreateMode = true;
+        isEditMode = false;
+    }
+
+    private async Task OpenEditForm(int foodId)
+    {
+        currentFoodId = foodId;
+        isLoading = true;
+        try
+        {
+            // Do API trả về mảng tất cả các món ăn, ta áp dụng logic tìm phần tử như code Angular gốc
+            var rawData = await Http.GetFromJsonAsync<List<FoodApiResponse>>(ApiUrl);
+            var food = rawData?.FirstOrDefault(x => x.MaMonAn == foodId);
+
+            if (food == null)
+            {
+                await JS.InvokeVoidAsync("alert", "Không tìm thấy món ăn");
+                return;
+            }
+
+            // Gán dữ liệu sang model form
+            foodForm = new FoodFormModel
+                {
+                    MaDanhMuc = food.MaDanhMuc,
+                    TenMonAn = food.TenMonAn,
+                    Gia = food.Gia,
+                    MoTa = food.MoTa ?? string.Empty,
+                    HinhAnh = food.HinhAnh ?? string.Empty,
+                    ConBan = food.ConBan
+                };
+
+            isEditMode = true;
+            isCreateMode = false;
+        }
+        catch (Exception)
+        {
+            await JS.InvokeVoidAsync("alert", "Không tải được dữ liệu món ăn");
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private void CloseForm()
+    {
+        isCreateMode = false;
+        isEditMode = false;
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        isLoading = true;
+        try
+        {
+            if (isCreateMode)
+            {
+                var response = await Http.PostAsJsonAsync(ApiUrl, foodForm);
+                if (response.IsSuccessStatusCode)
+                {
+                    await JS.InvokeVoidAsync("alert", "Thêm món thành công");
+                    CloseForm();
+                    await LoadFoods();
+                }
+                else
+                {
+                    await JS.InvokeVoidAsync("alert", "Thêm món thất bại");
+                }
+            }
+            else if (isEditMode)
+            {
+                var response = await Http.PutAsJsonAsync($"{ApiUrl}/{currentFoodId}", foodForm);
+                if (response.IsSuccessStatusCode)
+                {
+                    await JS.InvokeVoidAsync("alert", "Cập nhật món ăn thành công");
+                    CloseForm();
+                    await LoadFoods();
+                }
+                else
+                {
+                    await JS.InvokeVoidAsync("alert", "Không thể cập nhật món ăn");
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            await JS.InvokeVoidAsync("alert", "Lỗi xử lý hệ thống");
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private async Task DeleteFood(FoodViewModel food)
+    {
+        bool confirm = await JS.InvokeAsync<bool>("confirm", $"Bạn có chắc muốn xóa {food.TenMon}?");
+        if (!confirm) return;
+
+        try
+        {
+            var response = await Http.DeleteAsync($"{ApiUrl}/{food.MaMon}");
+            if (response.IsSuccessStatusCode)
+            {
+                await JS.InvokeVoidAsync("alert", "Xóa thành công");
+                await LoadFoods();
+            }
+            else
+            {
+                await JS.InvokeVoidAsync("alert", "Xóa thất bại");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            await JS.InvokeVoidAsync("alert", "Lỗi thao tác xóa");
+        }
+    }
+}

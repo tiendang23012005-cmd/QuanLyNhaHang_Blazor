@@ -72,17 +72,17 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"sjx8f4dy3s"},{"Name":"integrity","Value":"sha256-KFXztGMkVD6efSZ\u002Bp3myF93SiPZ2a\u002BZ2ADssp44XOMw="},{"Name":"label","Value":"index.html"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"979"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022KFXztGMkVD6efSZ\u002Bp3myF93SiPZ2a\u002BZ2ADssp44XOMw=\u0022"},{"Name":"Last-Modified","Value":"Sun, 07 Jun 2026 09:39:13 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="QuanLyNhaHang_DotNet.pqqy3gq0le.styles.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\QuanLyNhaHang_DotNet.styles.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"pqqy3gq0le"},{"Name":"integrity","Value":"sha256-4X7UvAxlxrZQAq9PZmGSFektzwnCFmqmS5QHJxHVS\u002BE="},{"Name":"label","Value":"QuanLyNhaHang_DotNet.styles.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4653"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00224X7UvAxlxrZQAq9PZmGSFektzwnCFmqmS5QHJxHVS\u002BE=\u0022"},{"Name":"Last-Modified","Value":"Sun, 07 Jun 2026 10:06:54 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="QuanLyNhaHang_DotNet.styles.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\QuanLyNhaHang_DotNet.styles.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-4X7UvAxlxrZQAq9PZmGSFektzwnCFmqmS5QHJxHVS\u002BE="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4653"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u00224X7UvAxlxrZQAq9PZmGSFektzwnCFmqmS5QHJxHVS\u002BE=\u0022"},{"Name":"Last-Modified","Value":"Sun, 07 Jun 2026 10:06:54 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Jxjn9S1kUWMKEQ9gYD60hLxFdR/OXfg8sgCEUa5o3WM="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"45750"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Jxjn9S1kUWMKEQ9gYD60hLxFdR/OXfg8sgCEUa5o3WM=\u0022"},{"Name":"Last-Modified","Value":"Sat, 13 Jun 2026 07:55:57 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="QuanLyNhaHang_DotNet.vyc222ib5b.styles.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\QuanLyNhaHang_DotNet.styles.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"vyc222ib5b"},{"Name":"integrity","Value":"sha256-Jxjn9S1kUWMKEQ9gYD60hLxFdR/OXfg8sgCEUa5o3WM="},{"Name":"label","Value":"QuanLyNhaHang_DotNet.styles.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"45750"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022Jxjn9S1kUWMKEQ9gYD60hLxFdR/OXfg8sgCEUa5o3WM=\u0022"},{"Name":"Last-Modified","Value":"Sat, 13 Jun 2026 07:55:57 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="sample-data/weather.iag0ou56lh.json">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\sample-data\weather.json'))</AssetFile>

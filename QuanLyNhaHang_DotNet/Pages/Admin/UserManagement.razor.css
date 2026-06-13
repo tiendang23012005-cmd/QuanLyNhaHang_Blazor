@@ -1,0 +1,266 @@
+﻿.management-container {
+    background: white;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.header-section {
+    margin-bottom: 25px;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-section small, .header-inside small {
+    color: #9ca3af;
+    font-weight: 700;
+}
+
+.header-section h2, .header-inside h2 {
+    margin: 8px 0;
+    color: #111827;
+}
+
+.header-inside h2 {
+    font-size: 32px;
+}
+
+.header-section p, .header-inside p {
+    color: #6b7280;
+    margin: 0;
+}
+
+.total-count {
+    color: #4b5563;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.add-new-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    background: #6c4cf1;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+    .add-new-btn:hover {
+        background: #5a3ee8;
+    }
+
+/* Bảng hiển thị danh sách nhân viên */
+.user-table-wrapper {
+    overflow-x: auto;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+    .user-table th,
+    .user-table td {
+        padding: 16px;
+        border-bottom: 1px solid #f3f4f6;
+    }
+
+    .user-table th {
+        background: #f9fafb;
+        color: #4b5563;
+        font-weight: 600;
+    }
+
+.action-edit-btn {
+    background: #e0e7ff;
+    color: #4338ca;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+    .action-edit-btn:hover {
+        background: #c7d2fe;
+    }
+
+/* Các nhãn vai trò */
+.role-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.badge-admin {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.badge-waiter {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.badge-chef {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.badge-cashier {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+/* --- KHUNG THÊM MỚI (CHUYỂN TỪ ANGULAR SANG) --- */
+.create-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.header-inside {
+    background: #f9fafb;
+    border-radius: 20px;
+    padding: 25px;
+    border-left: 5px solid #6c4cf1;
+}
+
+.form-card {
+    background: white;
+    border-radius: 25px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* STYLE CHUNG CHO CẢ FORM CHỈNH SỬA VÀ THÊM MỚI */
+.card {
+    background: white;
+    border-radius: 25px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+    .card h2 {
+        color: #111827;
+        margin-bottom: 10px;
+    }
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+    .form-group label {
+        font-weight: 600;
+        color: #374151;
+    }
+
+    /* Custom các Input Component của Blazor */
+    .form-group input,
+    .form-group select,
+    input, select {
+        padding: 15px 18px;
+        border: 1px solid #d1d5db;
+        border-radius: 15px;
+        font-size: 15px;
+        width: 100%;
+        box-sizing: border-box;
+        transition: .3s;
+    }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        input:focus, select:focus {
+            outline: none;
+            border-color: #6c4cf1;
+            box-shadow: 0 0 0 4px rgba(108, 76, 241, .1);
+        }
+
+.button-group {
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.save-btn {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 15px;
+    background: #6c4cf1;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(108, 76, 241, .3);
+    transition: .3s;
+}
+
+    .save-btn:hover {
+        background: #5a3ee8;
+    }
+
+.cancel-btn, .back-btn {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 15px;
+    background: #e5e7eb;
+    color: #374151;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+    .cancel-btn:hover, .back-btn:hover {
+        background: #d1d5db;
+    }
+
+/* Lỗi thông báo validator của Blazor */
+.validation-error {
+    color: #dc2626;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+/* Responsive di động cho Grid */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .cancel-btn,
+    .save-btn,
+    .back-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}

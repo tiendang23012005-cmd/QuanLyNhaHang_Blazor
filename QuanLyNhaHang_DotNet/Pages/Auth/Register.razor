@@ -1,0 +1,138 @@
+﻿@page "/register"
+@layout AuthLayout
+@using QuanLyNhaHang_DotNet.Models
+@using Microsoft.AspNetCore.Components.Forms
+@inject QuanLyNhaHang_DotNet.Services.AuthService AuthService
+
+<div class="container-fluid bg-light min-vh-100 d-flex align-items-center justify-content-center py-5">
+    <div class="row w-100 justify-content-center">
+        <div class="col-11 col-sm-10 col-md-8 col-lg-5">
+
+            <div class="card shadow-lg border-0 rounded-3 register-card animate-fade-in">
+                <div class="card-body p-4 p-sm-5">
+
+                    <div class="text-center mb-4">
+                        <h3 class="fw-bold text-warning text-uppercase m-0">ĐĂNG KÝ TÀI KHOẢN</h3>
+                        <small class="text-muted d-block mt-1">Hệ thống vận hành & Kiểm soát định mức nhà hàng</small>
+                    </div>
+
+                    <EditForm Model="@registerPayload" OnValidSubmit="HandleRegister">
+                        <DataAnnotationsValidator />
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold text-secondary small">Họ và tên</label>
+                            <InputText @bind-Value="registerPayload.HoTen" class="form-control border-2" placeholder="Nguyễn Văn A" />
+                            <div class="text-danger small mt-1">
+                                <ValidationMessage For="@(() => registerPayload.HoTen)" />
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold text-secondary small">Địa chỉ Email</label>
+                            <InputText type="email" @bind-Value="registerPayload.Email" class="form-control border-2" placeholder="example@gmail.com" />
+                            <div class="text-danger small mt-1">
+                                <ValidationMessage For="@(() => registerPayload.Email)" />
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold text-secondary small">Số điện thoại</label>
+                            <InputText @bind-Value="registerPayload.DienThoai" class="form-control border-2" placeholder="09xxxxxxxx" />
+                            <div class="text-danger small mt-1">
+                                <ValidationMessage For="@(() => registerPayload.DienThoai)" />
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-semibold text-secondary small">Mật khẩu</label>
+                                <InputText type="password" @bind-Value="registerPayload.MatKhau" class="form-control border-2" placeholder="******" />
+                                <div class="text-danger small mt-1">
+                                    <ValidationMessage For="@(() => registerPayload.MatKhau)" />
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <label class="form-label fw-semibold text-secondary small">Nhập lại mật khẩu</label>
+                                <InputText type="password" @bind-Value="registerPayload.NhapLaiMatKhau" class="form-control border-2" placeholder="******" />
+                                <div class="text-danger small mt-1">
+                                    <ValidationMessage For="@(() => registerPayload.NhapLaiMatKhau)" />
+                                </div>
+                            </div>
+                        </div>
+
+                        @if (!string.IsNullOrEmpty(errorMessage))
+                        {
+                            <div class="alert alert-danger text-center p-2 small mb-3">
+                                @errorMessage
+                            </div>
+                        }
+
+                        @if (!string.IsNullOrEmpty(successMessage))
+                        {
+                            <div class="alert alert-success text-center p-2 small mb-3">
+                                @successMessage
+                            </div>
+                        }
+
+                        <button disabled="@isLoading" type="submit" class="btn btn-warning w-100 text-white fw-bold shadow-sm py-2">
+                            @if (isLoading)
+                            {
+                                <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                                <span>ĐANG TẠO TÀI KHOẢN...</span>
+                            }
+                            else
+                            {
+                                <span>ĐĂNG KÝ NGAY</span>
+                            }
+                        </button>
+
+                    </EditForm>
+
+                    <div class="text-center mt-4">
+                        <p class="small text-muted m-0">Bạn đã có tài khoản? <a href="/login" class="text-warning fw-semibold text-decoration-none">Đăng nhập ngay</a></p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@code {
+    private RegisterRequest registerPayload = new();
+    private string errorMessage = string.Empty;
+    private string successMessage = string.Empty;
+    private bool isLoading = false;
+
+    private async Task HandleRegister()
+    {
+        isLoading = true;
+        errorMessage = string.Empty;
+        successMessage = string.Empty;
+
+        try
+        {
+            // Gửi dữ liệu đăng ký sang API
+            var res = await AuthService.RegisterAsync(registerPayload);
+
+            if (res != null && res.IsSuccess)
+            {
+                successMessage = res.Message ?? "Đăng ký tài khoản thành công!";
+                registerPayload = new(); // Reset dữ liệu form về trống như form.reset() của Angular
+            }
+            else
+            {
+                errorMessage = res?.Message ?? "Đăng ký thất bại. Dữ liệu không hợp lệ!";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = "Đăng ký thất bại. Lỗi kết nối hệ thống Server API!";
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+}

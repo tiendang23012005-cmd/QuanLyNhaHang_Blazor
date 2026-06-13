@@ -1,0 +1,347 @@
+﻿@page "/admin/user-management"
+@page "/admin/create-employee"
+@layout AdminLayout
+@using RestaurantManagement.Frontend.Models
+@using System.Net.Http.Json
+@inject HttpClient Http
+@inject IJSRuntime JS
+@inject NavigationManager Navigation
+
+<div class="management-container">
+    @if (!isEditMode && !isCreateMode)
+    {
+        @* --- 1. CHẾ ĐỘ HIỂN THỊ DANH SÁCH --- *@
+        <div class="header-section">
+            <div class="header-flex">
+                <div>
+                    <small>QUẢN LÝ TÀI KHOẢN</small>
+                    <h2>Danh sách nhân viên</h2>
+                    <p>Quản lý thông tin và phân quyền nhân sự trong nhà hàng</p>
+                </div>
+                <button class="add-new-btn" @onclick="OpenCreateForm">➕ Thêm nhân viên</button>
+            </div>
+        </div>
+
+        <p class="total-count">Tổng số nhân viên: @users.Count</p>
+
+        <div class="user-table-wrapper">
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>Họ tên</th>
+                        <th>Email</th>
+                        <th>Điện thoại</th>
+                        <th>Vai trò</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var user in users)
+                    {
+                        <tr>
+                            <td><strong>@user.HoTen</strong></td>
+                            <td>@user.Email</td>
+                            <td>@user.DienThoai</td>
+                            <td>
+                                <span class="role-badge @(GetRoleClass(user.MaVaiTro))">
+                                    @GetRoleName(user.MaVaiTro)
+                                </span>
+                            </td>
+                            <td>
+                                <button class="action-edit-btn" @onclick="() => OpenEditForm(user)">✏️ Sửa</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else if (isCreateMode)
+    {
+        @* --- 2. CHẾ ĐỘ THÊM MỚI NHÂN VIÊN (Chuyển đổi từ Angular sang) --- *@
+        <div class="create-container">
+            <div class="header-inside">
+                <small>QUẢN LÝ NHÂN VIÊN</small>
+                <h2>Thêm nhân viên mới</h2>
+                <p>Tạo tài khoản nhân viên mới cho hệ thống</p>
+            </div>
+
+            <div class="form-card">
+                <EditForm Model="newUser" OnValidSubmit="HandleAddEmployee">
+                    <DataAnnotationsValidator />
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>👤 Họ và tên</label>
+                            <InputText placeholder="Nhập họ tên" @bind-Value="newUser.HoTen" />
+                            <ValidationMessage For="() => newUser.HoTen" class="validation-error" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>📧 Email</label>
+                            <InputText type="email" placeholder="Nhập email" @bind-Value="newUser.Email" />
+                            <ValidationMessage For="() => newUser.Email" class="validation-error" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>📱 Số điện thoại</label>
+                            <InputText placeholder="Nhập số điện thoại" @bind-Value="newUser.DienThoai" />
+                            <ValidationMessage For="() => newUser.DienThoai" class="validation-error" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>🔐 Mật khẩu</label>
+                            <InputText type="password" placeholder="Nhập mật khẩu" @bind-Value="newUser.MatKhau" />
+                            <ValidationMessage For="() => newUser.MatKhau" class="validation-error" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>👥 Vai trò</label>
+                            <InputSelect @bind-Value="newUser.MaVaiTro">
+                                <option value="2">Phục vụ</option>
+                                <option value="3">Nhà bếp</option>
+                                <option value="4">Thu ngân</option>
+                            </InputSelect>
+                            <ValidationMessage For="() => newUser.MaVaiTro" class="validation-error" />
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <button type="button" class="cancel-btn" @onclick="CloseForm" disabled="@isLoading">
+                            ← Quay lại
+                        </button>
+                        <button type="submit" class="save-btn" disabled="@isLoading">
+                            @if (isLoading)
+                            {
+                                <span>⏳ Đang xử lý...</span>
+                            }
+                            else
+                            {
+                                <span>💾 Lưu nhân viên</span>
+                            }
+                        </button>
+                    </div>
+                </EditForm>
+            </div>
+        </div>
+    }
+    else if (isEditMode)
+    {
+        @* --- 3. CHẾ ĐỘ CẬP NHẬT NHÂN VIÊN --- *@
+        <div class="card">
+            <h2>Cập nhật nhân viên</h2>
+
+            <EditForm Model="editingUser" OnValidSubmit="HandleUpdateEmployee">
+                <DataAnnotationsValidator />
+
+                <div class="form-group">
+                    <label>Họ tên</label>
+                    <InputText placeholder="Họ tên" @bind-Value="editingUser.HoTen" />
+                    <ValidationMessage For="() => editingUser.HoTen" class="validation-error" />
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <InputText placeholder="Email" @bind-Value="editingUser.Email" />
+                    <ValidationMessage For="() => editingUser.Email" class="validation-error" />
+                </div>
+
+                <div class="form-group">
+                    <label>Điện thoại</label>
+                    <InputText placeholder="Điện thoại" @bind-Value="editingUser.DienThoai" />
+                    <ValidationMessage For="() => editingUser.DienThoai" class="validation-error" />
+                </div>
+
+                <div class="form-group">
+                    <label>Vai trò</label>
+                    <InputSelect @bind-Value="editingUser.MaVaiTro">
+                        <option value="1">Quản lý</option>
+                        <option value="2">Phục vụ</option>
+                        <option value="3">Bếp</option>
+                        <option value="4">Thu ngân</option>
+                    </InputSelect>
+                    <ValidationMessage For="() => editingUser.MaVaiTro" class="validation-error" />
+                </div>
+
+                <div class="button-group">
+                    <button type="button" class="back-btn" @onclick="CloseForm" disabled="@isLoading">
+                        ← Quay lại
+                    </button>
+                    <button type="submit" class="save-btn" disabled="@isLoading">
+                        @if (isLoading)
+                        {
+                            <span>⏳ Đang lưu...</span>
+                        }
+                        else
+                        {
+                            <span>Lưu thay đổi</span>
+                        }
+                    </button>
+                </div>
+            </EditForm>
+        </div>
+    }
+</div>
+
+@code {
+    private List<UserModel> users = new();
+    private UserModel editingUser = new();
+    private UserCreateDto newUser = new(); // Sử dụng DTO riêng cho việc tạo mới chứa thuộc tính MatKhau
+
+    private bool isEditMode = false;
+    private bool isCreateMode = false;
+    private bool isLoading = false;
+    private const string ApiUrl = "https://localhost:7043/api/UserManagement";
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Kiểm tra xem người dùng truy cập từ URL nào để bật đúng chế độ hiển thị
+        var uri = Navigation.ToAbsoluteUri(Navigation.Uri);
+        if (uri.AbsolutePath.Contains("create-employee"))
+        {
+            OpenCreateForm();
+        }
+        else
+        {
+            await LoadUsers();
+        }
+    }
+
+    private async Task LoadUsers()
+    {
+        try
+        {
+            var result = await Http.GetFromJsonAsync<List<UserModel>>(ApiUrl);
+            if (result != null)
+            {
+                users = result;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            await JS.InvokeVoidAsync("alert", "Không tải được danh sách nhân viên");
+        }
+    }
+
+    private void OpenCreateForm()
+    {
+        newUser = new UserCreateDto { MaVaiTro = 2 }; // Giá trị mặc định: Phục vụ
+        isEditMode = false;
+        isCreateMode = true;
+    }
+
+    private async Task OpenEditForm(UserModel user)
+    {
+        isLoading = true;
+        try
+        {
+            var detail = await Http.GetFromJsonAsync<UserModel>($"{ApiUrl}/{user.MaNguoiDung}");
+            if (detail != null)
+            {
+                editingUser = detail;
+                isCreateMode = false;
+                isEditMode = true;
+            }
+        }
+        catch (Exception)
+        {
+            await JS.InvokeVoidAsync("alert", "Không tìm thấy nhân viên");
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private async Task CloseForm()
+    {
+        isEditMode = false;
+        isCreateMode = false;
+        // Trả URL về trang chủ quản lý để tránh nhầm trạng thái khi ấn nút Back
+        Navigation.NavigateTo("admin/user-management", forceLoad: false);
+        await LoadUsers();
+    }
+
+    private async Task HandleAddEmployee()
+    {
+        isLoading = true;
+        try
+        {
+            var response = await Http.PostAsJsonAsync(ApiUrl, newUser);
+            if (response.IsSuccessStatusCode)
+            {
+                await JS.InvokeVoidAsync("alert", "Thêm nhân viên thành công");
+                await CloseForm();
+            }
+            else
+            {
+                await JS.InvokeVoidAsync("alert", "Thêm nhân viên thất bại");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            await JS.InvokeVoidAsync("alert", "Lỗi kết nối máy chủ backend");
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private async Task HandleUpdateEmployee()
+    {
+        isLoading = true;
+        try
+        {
+            var response = await Http.PutAsJsonAsync($"{ApiUrl}/{editingUser.MaNguoiDung}", editingUser);
+            if (response.IsSuccessStatusCode)
+            {
+                await JS.InvokeVoidAsync("alert", "Cập nhật thành công");
+                await CloseForm();
+            }
+            else
+            {
+                await JS.InvokeVoidAsync("alert", "Cập nhật thất bại");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            await JS.InvokeVoidAsync("alert", "Lỗi kết nối máy chủ backend");
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private string GetRoleName(int roleId) => roleId switch
+    {
+        1 => "Quản lý",
+        2 => "Phục vụ",
+        3 => "Bếp",
+        4 => "Thu ngân",
+        _ => "Chưa xác định"
+    };
+
+    private string GetRoleClass(int roleId) => roleId switch
+    {
+        1 => "badge-admin",
+        2 => "badge-waiter",
+        3 => "badge-chef",
+        4 => "badge-cashier",
+        _ => "badge-default"
+    };
+
+    // Khai báo lớp cục bộ DTO để bind dữ liệu form thêm mới
+    public class UserCreateDto
+    {
+        public string HoTen { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+        public string DienThoai { get; set; } = string.Empty;
+        public string MatKhau { get; set; } = string.Empty;
+        public int MaVaiTro { get; set; } = 2;
+    }
+}

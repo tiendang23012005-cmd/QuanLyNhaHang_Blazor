@@ -1,0 +1,251 @@
+﻿@page "/admin/table-management"
+@layout AdminLayout
+@using RestaurantManagement.Frontend.Models
+@using System.Net.Http.Json
+@inject HttpClient Http
+@inject IJSRuntime JS
+
+<div class="table-container">
+
+    <div class="header-section">
+        <div>
+            <small>QUẢN LÝ BÀN</small>
+            @if (isCreateMode)
+            {
+                <h2>Thêm bàn mới</h2>
+                <p>Tạo bàn mới cho nhà hàng</p>
+            }
+            else if (isEditMode)
+            {
+                <h2>Cập nhật bàn</h2>
+                <p>Chỉnh sửa thông tin cấu hình bàn</p>
+            }
+            else
+            {
+                <h2>Danh sách bàn</h2>
+                <p>Quản lý trạng thái và thông tin các bàn trong nhà hàng</p>
+            }
+        </div>
+
+        @if (!isCreateMode && !isEditMode)
+        {
+            <button class="add-btn" @onclick="OpenCreateForm">
+                ➕ Thêm bàn
+            </button>
+        }
+    </div>
+
+    @if (!isCreateMode && !isEditMode)
+    {
+        <p class="total-table">
+            Tổng số bàn: @tables.Count
+        </p>
+
+        <div class="table-grid">
+            @foreach (var table in tables)
+            {
+                <div class="table-card">
+                    <div class="table-icon">🍽️</div>
+                    <h3>@table.SoBan</h3>
+                    <p>Sức chứa: <strong>@table.SucChua người</strong></p>
+
+                    <span class="status @(table.TrangThaiBan switch {
+                        "Trống" => "empty",
+                        "Đang phục vụ" => "busy",
+                        "Đã đặt trước" => "reserved",
+                        _ => ""
+                    })">
+                        @table.TrangThaiBan
+                    </span>
+
+                    <div class="action-buttons">
+                        <button class="edit-btn" @onclick="() => OpenEditForm(table)">
+                            ✏️ Sửa
+                        </button>
+                        <button class="delete-btn" @onclick="() => DeleteTable(table)">
+                            🗑️ Xóa
+                        </button>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="form-card">
+            <EditForm Model="editingTable" OnValidSubmit="HandleValidSubmit">
+                <DataAnnotationsValidator />
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>🍽️ Số bàn</label>
+                        <InputText placeholder="Ví dụ: Bàn 07" @bind-Value="editingTable.SoBan" />
+                        <ValidationMessage For="() => editingTable.SoBan" class="text-validation-error" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>👥 Sức chứa</label>
+                        <InputNumber min="1" @bind-Value="editingTable.SucChua" />
+                        <ValidationMessage For="() => editingTable.SucChua" class="text-validation-error" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>📌 Trạng thái</label>
+                        <InputSelect @bind-Value="editingTable.TrangThaiBan">
+                            <option value="Trống">Trống</option>
+                            <option value="Đang phục vụ">Đang phục vụ</option>
+                            <option value="Đã đặt trước">Đã đặt trước</option>
+                        </InputSelect>
+                        <ValidationMessage For="() => editingTable.TrangThaiBan" class="text-validation-error" />
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button type="button" class="cancel-btn" @onclick="CloseForm" disabled="@isLoading">
+                        ← Quay lại
+                    </button>
+                    <button type="submit" class="save-btn" disabled="@isLoading">
+                        @if (isLoading)
+                        {
+                            <span>⏳ Đang xử lý...</span>
+                        }
+                        else
+                        {
+                            <span>💾 @(isCreateMode ? "Lưu bàn" : "Cập nhật")</span>
+                        }
+                    </button>
+                </div>
+            </EditForm>
+        </div>
+    }
+</div>
+
+@code {
+    private List<TableManagementModel> tables = new();
+    private TableManagementModel editingTable = new();
+
+    private bool isCreateMode = false;
+    private bool isEditMode = false;
+    private bool isLoading = false;
+    private const string ApiUrl = "https://localhost:7043/api/TableManagement";
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadTables();
+    }
+
+    private async Task LoadTables()
+    {
+        try
+        {
+            var result = await Http.GetFromJsonAsync<List<TableManagementModel>>(ApiUrl);
+            if (result != null)
+            {
+                tables = result;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            await JS.InvokeVoidAsync("alert", "Không tải được danh sách bàn từ hệ thống.");
+        }
+    }
+
+    private void OpenCreateForm()
+    {
+        editingTable = new TableManagementModel();
+        isCreateMode = true;
+        isEditMode = false;
+    }
+
+    private void OpenEditForm(TableManagementModel table)
+    {
+        // Clone object để tránh binding làm thay đổi trực tiếp dữ liệu UI dưới Grid khi chưa ấn Lưu
+        editingTable = new TableManagementModel
+            {
+                MaBan = table.MaBan,
+                SoBan = table.SoBan,
+                SucChua = table.SucChua,
+                TrangThaiBan = table.TrangThaiBan
+            };
+        isEditMode = true;
+        isCreateMode = false;
+    }
+
+    private void CloseForm()
+    {
+        isCreateMode = false;
+        isEditMode = false;
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        isLoading = true;
+        try
+        {
+            if (isCreateMode)
+            {
+                var response = await Http.PostAsJsonAsync(ApiUrl, editingTable);
+                if (response.IsSuccessStatusCode)
+                {
+                    await JS.InvokeVoidAsync("alert", "Thêm bàn thành công!");
+                    CloseForm();
+                    await LoadTables();
+                }
+                else
+                {
+                    var errorMsg = await response.Content.ReadAsStringAsync();
+                    await JS.InvokeVoidAsync("alert", string.IsNullOrEmpty(errorMsg) ? "Không thể thêm bàn." : errorMsg);
+                }
+            }
+            else if (isEditMode)
+            {
+                var response = await Http.PutAsJsonAsync($"{ApiUrl}/{editingTable.MaBan}", editingTable);
+                if (response.IsSuccessStatusCode)
+                {
+                    await JS.InvokeVoidAsync("alert", "Cập nhật thông tin bàn thành công!");
+                    CloseForm();
+                    await LoadTables();
+                }
+                else
+                {
+                    await JS.InvokeVoidAsync("alert", "Không thể cập nhật thông tin bàn.");
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            await JS.InvokeVoidAsync("alert", "Lỗi kết nối API.");
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+
+    private async Task DeleteTable(TableManagementModel table)
+    {
+        bool confirmDelete = await JS.InvokeAsync<bool>("confirm", $"Bạn có chắc muốn xóa {table.SoBan}?");
+        if (!confirmDelete) return;
+
+        try
+        {
+            var response = await Http.DeleteAsync($"{ApiUrl}/{table.MaBan}");
+            if (response.IsSuccessStatusCode)
+            {
+                await JS.InvokeVoidAsync("alert", "Xóa bàn thành công.");
+                await LoadTables();
+            }
+            else
+            {
+                await JS.InvokeVoidAsync("alert", "Không thể xóa bàn này.");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            await JS.InvokeVoidAsync("alert", "Lỗi thao tác xóa.");
+        }
+    }
+}

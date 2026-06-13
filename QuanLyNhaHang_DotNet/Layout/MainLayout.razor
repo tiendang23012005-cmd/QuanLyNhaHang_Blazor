@@ -1,16 +1,49 @@
 ﻿@inherits LayoutComponentBase
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+@inject NavigationManager Navigation
+@implements IDisposable
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
 
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div>
+<Header />
+
+<main>
+    @Body
+</main>
+
+@code {
+    private bool hienThiHeaderToanCuc = true;
+
+    protected override void OnInitialized()
+    {
+        // 1. Kiểm tra trạng thái URL ngay khi hệ thống vừa khởi chạy lần đầu
+        KiemTraUrlDeAnHienHeader(Navigation.Uri);
+
+        // 2. Đăng ký sự kiện lắng nghe mỗi khi người dùng click chuyển trang
+        Navigation.LocationChanged += OnThayDoiDiaChiUrl;
+    }
+
+    private void OnThayDoiDiaChiUrl(object? sender, LocationChangedEventArgs e)
+    {
+        KiemTraUrlDeAnHienHeader(e.Location);
+        
+        // Ép Blazor RenderTree tính toán lại để ẩn/hiện Header lập tức trên UI
+        StateHasChanged(); 
+    }
+
+    private void KiemTraUrlDeAnHienHeader(string url)
+    {
+        // Chuyển chuỗi URL về dạng chữ thường để so sánh chuẩn xác nhất
+        var urlChuThuong = url.ToLower();
+
+        // Nếu tuyến đường chứa /login hoặc /register thì trả về true
+        bool laTrangXacThuc = urlChuThuong.Contains("/login") || urlChuThuong.Contains("/register");
+        
+        // Ẩn Header nếu đang ở các trang Xác thực tài khoản
+        hienThiHeaderToanCuc = !laTrangXacThuc;
+    }
+
+    public void Dispose()
+    {
+        // Hủy theo dõi sự kiện chuyển trang để tránh rò rỉ bộ nhớ (Memory Leak)
+        Navigation.LocationChanged -= OnThayDoiDiaChiUrl;
+    }
+}

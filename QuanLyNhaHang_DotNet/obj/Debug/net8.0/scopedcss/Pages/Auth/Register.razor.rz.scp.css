@@ -1,0 +1,14 @@
+.animate-fade-in[b-jdmjptkzk6] {
+    animation: fadeIn-b-jdmjptkzk6 ease 0.8s;
+    -webkit-animation: fadeIn ease 0.8s;
+}
+
+@keyframes fadeIn-b-jdmjptkzk6 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

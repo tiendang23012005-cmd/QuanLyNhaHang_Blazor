@@ -1,0 +1,238 @@
+.table-container[b-pepynoyui4] {
+    background: white;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.header-section[b-pepynoyui4] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+    .header-section small[b-pepynoyui4] {
+        color: #9ca3af;
+        font-weight: 700;
+    }
+
+    .header-section h2[b-pepynoyui4] {
+        margin: 10px 0;
+        color: #111827;
+    }
+
+    .header-section p[b-pepynoyui4] {
+        color: #9ca3af;
+    }
+
+.add-btn[b-pepynoyui4] {
+    background: #6c4cf1;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(108, 76, 241, 0.3);
+    transition: .3s;
+}
+
+    .add-btn:hover[b-pepynoyui4] {
+        background: #5a3ee8;
+    }
+
+.table-grid[b-pepynoyui4] {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.table-card[b-pepynoyui4] {
+    background: #f9fafb;
+    border-radius: 25px;
+    padding: 25px;
+    text-align: center;
+    transition: .3s;
+}
+
+    .table-card:hover[b-pepynoyui4] {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, .08);
+    }
+
+.table-icon[b-pepynoyui4] {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    background: #ede9fe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+}
+
+.table-card h3[b-pepynoyui4] {
+    margin: 10px 0;
+    color: #111827;
+}
+
+.table-card p[b-pepynoyui4] {
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+.status[b-pepynoyui4] {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.empty[b-pepynoyui4] {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.busy[b-pepynoyui4] {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.reserved[b-pepynoyui4] {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.action-buttons[b-pepynoyui4] {
+    display: flex;
+    gap: 10px;
+}
+
+    .action-buttons button[b-pepynoyui4] {
+        flex: 1;
+        border: none;
+        border-radius: 12px;
+        padding: 10px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: .3s;
+    }
+
+.edit-btn[b-pepynoyui4] {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+    .edit-btn:hover[b-pepynoyui4] {
+        background: #bfdbfe;
+    }
+
+.delete-btn[b-pepynoyui4] {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+    .delete-btn:hover[b-pepynoyui4] {
+        background: #fecaca;
+    }
+
+/* Phần Style Form Thêm/Sửa được đồng bộ hóa */
+.form-card[b-pepynoyui4] {
+    background: white;
+    border-radius: 25px;
+    padding: 40px;
+}
+
+.form-grid[b-pepynoyui4] {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.form-group[b-pepynoyui4] {
+    display: flex;
+    flex-direction: column;
+}
+
+    .form-group label[b-pepynoyui4] {
+        margin-bottom: 10px;
+        font-weight: 600;
+        color: #374151;
+    }
+
+    .form-group input[b-pepynoyui4],
+    .form-group select[b-pepynoyui4] {
+        padding: 15px 18px;
+        border: 1px solid #d1d5db;
+        border-radius: 15px;
+        font-size: 15px;
+        transition: .3s;
+    }
+
+        .form-group input:focus[b-pepynoyui4],
+        .form-group select:focus[b-pepynoyui4] {
+            outline: none;
+            border-color: #6c4cf1;
+            box-shadow: 0 0 0 4px rgba(108, 76, 241, .1);
+        }
+
+.button-group[b-pepynoyui4] {
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.cancel-btn[b-pepynoyui4] {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 15px;
+    background: #e5e7eb;
+    color: #374151;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+    .cancel-btn:hover[b-pepynoyui4] {
+        background: #d1d5db;
+    }
+
+.save-btn[b-pepynoyui4] {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 15px;
+    background: #6c4cf1;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(108, 76, 241, .3);
+    transition: .3s;
+}
+
+    .save-btn:hover[b-pepynoyui4] {
+        background: #5a3ee8;
+    }
+
+/* Custom CSS cho thông báo lỗi Validation của Blazor */
+.text-validation-error[b-pepynoyui4] {
+    color: #dc2626;
+    font-size: 13px;
+    margin-top: 6px;
+    font-weight: 500;
+    padding-left: 5px;
+}
+
+@media (max-width: 768px) {
+    .form-grid[b-pepynoyui4] {
+        grid-template-columns: 1fr;
+    }
+
+    .button-group[b-pepynoyui4] {
+        flex-direction: column;
+    }
+}

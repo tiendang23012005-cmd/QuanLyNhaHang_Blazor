@@ -1,0 +1,143 @@
+﻿@page "/login"
+@layout AuthLayout
+@using QuanLyNhaHang_DotNet.Models
+@using Microsoft.AspNetCore.Components.Forms
+@inject QuanLyNhaHang_DotNet.Services.AuthService AuthService
+@inject NavigationManager Router
+@inject IJSRuntime JS
+
+<div class="container-fluid bg-light min-vh-100 d-flex align-items-center justify-content-center">
+    <div class="row w-100 justify-content-center">
+        <div class="col-11 col-sm-8 col-md-6 col-lg-4">
+
+            <div class="card shadow-lg border-0 rounded-3 auth-card animate-fade-in">
+                <div class="card-body p-4 p-sm-5">
+
+                    <div class="text-center mb-4">
+                        <h3 class="fw-bold text-warning text-uppercase m-0">QUẢN LÝ NHÀ HÀNG</h3>
+                        <small class="text-muted d-block mt-1">Hệ thống vận hành & Kiểm soát định mức</small>
+                    </div>
+
+                    <EditForm Model="@loginPayload" OnValidSubmit="HandleSubmit">
+                        <DataAnnotationsValidator />
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold text-secondary small">Tài khoản đăng nhập</label>
+                            <InputText @bind-Value="loginPayload.Identifer" class="form-control border-2" placeholder="Email, SĐT hoặc Username" />
+                            <div class="text-danger small mt-1">
+                                <ValidationMessage For="@(() => loginPayload.Identifer)" />
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-semibold text-secondary small">Mật khẩu</label>
+                            <InputText type="password" @bind-Value="loginPayload.MatKhau" class="form-control border-2" placeholder="******" />
+                            <div class="text-danger small mt-1">
+                                <ValidationMessage For="@(() => loginPayload.MatKhau)" />
+                            </div>
+                        </div>
+
+                        @if (!string.IsNullOrEmpty(errorMessage))
+                        {
+                            <div class="alert alert-danger text-center p-2 small mb-3">
+                                @errorMessage
+                            </div>
+                        }
+
+                        <button disabled="@isLoading" type="submit" class="btn btn-warning w-100 text-white fw-bold shadow-sm py-2">
+                            @if (isLoading)
+                            {
+                                <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                                <span>ĐANG XỬ LÝ...</span>
+                            }
+                            else
+                            {
+                                <span>ĐĂNG NHẬP</span>
+                            }
+                        </button>
+
+                    </EditForm>
+
+                    <div class="text-center mt-4">
+                        <p class="small text-muted mb-1">Bạn chưa có tài khoản? <a href="/register" class="text-warning fw-semibold text-decoration-none">Đăng ký mới</a></p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@code {
+    private LoginRequest loginPayload = new();
+    private string errorMessage = string.Empty;
+    private bool isLoading = false;
+
+    // Chỉ định rõ Namespace để tránh lỗi không tìm thấy AuthenticationStateProvider
+    [Inject] private Microsoft.AspNetCore.Components.Authorization.AuthenticationStateProvider AuthStateProvider { get; set; } = default!;
+
+    private async Task HandleSubmit()
+    {
+        isLoading = true;
+        errorMessage = string.Empty;
+
+        try
+        {
+            // 1. Gọi API đăng nhập từ Backend
+            var res = await AuthService.LoginAsync(loginPayload.Identifer, loginPayload.MatKhau);
+
+            if (res != null && res.IsSuccess && !string.IsNullOrEmpty(res.Token))
+            {
+                // 2. Tạo đối tượng Session đồng bộ với Frontend
+                var userSession = new UserSession
+                    {
+                        Token = res.Token,
+                        Role = res.Role?.Trim() ?? "Guest",
+                        FullName = res.FullName ?? "Thành viên"
+                    };
+
+                // 3. Sử dụng System.Text.Json để chuyển thành chuỗi JSON
+                var sessionJson = System.Text.Json.JsonSerializer.Serialize(userSession);
+
+                // 4. Lưu vào sessionStorage (Tự động xóa sạch khi đóng trình duyệt)
+                await JS.InvokeVoidAsync("sessionStorage.setItem", "currentUser", sessionJson);
+
+                // 5. Thông báo cho CustomAuthStateProvider để cập nhật Header lập tức
+                var customProvider = (CustomAuthStateProvider)AuthStateProvider;
+                customProvider.NotifyUserLoggedIn(userSession);
+
+                // Chờ một chút để tầng UI nhận luồng
+                await Task.Delay(50);
+
+                // 6. Điều hướng mượt mà không cần F5 trang
+                string currentRole = userSession.Role.ToLower();
+                if (currentRole == "admin" || currentRole == "quản lý")
+                {
+                    Router.NavigateTo("/admin/user-management", forceLoad: false);
+                }
+                else if (currentRole == "nhà bếp" || currentRole == "phục vụ" || currentRole == "waiter")
+                {
+                    Router.NavigateTo("/staff-dashboard", forceLoad: false);
+                }
+                else
+                {
+                    Router.NavigateTo("/menu", forceLoad: false);
+                }
+            }
+            else
+            {
+                errorMessage = res?.Message ?? "Tài khoản hoặc mật khẩu không chính xác.";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = "Đã xảy ra lỗi hệ thống khi kết nối API. Vui lòng kiểm tra lại.";
+            Console.WriteLine($"Lỗi Login: {ex.Message}");
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+}

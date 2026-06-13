@@ -1,0 +1,115 @@
+﻿@inherits LayoutComponentBase
+@using Microsoft.AspNetCore.Components.Authorization
+@using System.Security.Claims
+@inject NavigationManager Navigation
+@inject QuanLyNhaHang_DotNet.Services.AuthService AuthService
+
+@* Khóa chặt Layout: Chỉ ai có Role là 'Admin' hoặc 'Quản lý' mới được render nội dung *@
+<AuthorizeView Roles="Admin, Quản lý">
+    <Authorized>
+        <div class="layout">
+            <aside class="sidebar">
+                <div class="logo">
+                    <div class="logo-icon">👑</div>
+                    <span class="logo-text">Quy Nhơn Admin</span>
+                </div>
+
+                <nav>
+                    <NavLink class="nav-link" href="admin/user-management" Match="NavLinkMatch.All">
+                        <span class="nav-icon">👥</span> Quản lý nhân viên
+                    </NavLink>
+
+                    <NavLink class="nav-link" href="admin/table-management">
+                        <span class="nav-icon">🍽️</span> Quản lý bàn
+                    </NavLink>
+
+                    <NavLink class="nav-link" href="admin/food-management">
+                        <span class="nav-icon">🍜</span> Quản lý món ăn
+                    </NavLink>
+
+                    <NavLink class="nav-link" href="admin/revenue">
+                        <span class="nav-icon">📈</span> Doanh thu
+                    </NavLink>
+                </nav>
+            </aside>
+
+            <main class="content">
+                <div class="topbar">
+                    <div class="topbar-left">
+                        <h1>Hệ thống quản lý Nhà hàng</h1>
+                        <p>Đặc sản Quy Nhơn • Vận hành & Kinh doanh</p>
+                    </div>
+
+                    <div class="topbar-right">
+                        <div class="admin-info">
+                            <div class="avatar">@Avatar</div>
+                            <div class="admin-detail">
+                                <strong>@FullName</strong>
+                                <span class="role">@Role</span>
+                            </div>
+                            <button class="logout-btn" @onclick="HandleLogout" title="Đăng xuất hệ thống">
+                                <span class="logout-icon">🚪</span> Đăng xuất
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-body">
+                    @Body
+                </div>
+            </main>
+        </div>
+    </Authorized>
+
+    <NotAuthorized>
+        <div class="unauthorized-container">
+            <div class="spinner-border text-danger" role="status"></div>
+            <p class="unauthorized-text">Bạn không có quyền truy cập vùng quản trị. Đang chuyển hướng...</p>
+        </div>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    [CascadingParameter]
+    private Task<AuthenticationState>? AuthStateTask { get; set; }
+
+    private string FullName { get; set; } = "Admin";
+    private string Role { get; set; } = "Quản lý";
+    private string Avatar { get; set; } = "A";
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (AuthStateTask != null)
+        {
+            var authState = await AuthStateTask;
+            var user = authState.User;
+
+            if (user.Identity?.IsAuthenticated == true)
+            {
+                FullName = user.Identity.Name ?? "Admin";
+                Role = user.FindFirst(ClaimTypes.Role)?.Value ?? "Quản lý";
+
+                if (Role != "Admin" && Role != "Quản lý")
+                {
+                    Navigation.NavigateTo("login", forceLoad: false);
+                    return;
+                }
+
+                if (!string.IsNullOrWhiteSpace(FullName))
+                {
+                    Avatar = FullName.Trim().Substring(0, 1).ToUpper();
+                }
+            }
+            else
+            {
+                Navigation.NavigateTo("login", forceLoad: false);
+            }
+        }
+    }
+
+    private async Task HandleLogout()
+    {
+        await AuthService.LogoutAsync();
+        Navigation.NavigateTo("login", forceLoad: false);
+    }
+}

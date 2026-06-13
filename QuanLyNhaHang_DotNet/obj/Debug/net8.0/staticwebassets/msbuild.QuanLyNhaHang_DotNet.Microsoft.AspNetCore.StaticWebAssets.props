@@ -120,8 +120,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName>ScopedCss</AssetTraitName>
       <AssetTraitValue>ApplicationBundle</AssetTraitValue>
-      <Fingerprint>pqqy3gq0le</Fingerprint>
-      <Integrity>4X7UvAxlxrZQAq9PZmGSFektzwnCFmqmS5QHJxHVS+E=</Integrity>
+      <Fingerprint>vyc222ib5b</Fingerprint>
+      <Integrity>Jxjn9S1kUWMKEQ9gYD60hLxFdR/OXfg8sgCEUa5o3WM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\QuanLyNhaHang_DotNet.styles.css'))</OriginalItemSpec>

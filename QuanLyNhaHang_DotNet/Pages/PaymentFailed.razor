@@ -1,0 +1,33 @@
+﻿@page "/payment-failed"
+
+<PageTitle>Thanh toán thất bại - Nhà hàng</PageTitle>
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-lg border-0 text-center p-5">
+                <i class="bi bi-x-circle-fill text-danger display-1 mb-4"></i>
+                <h2 class="fw-bold text-danger">Thanh toán thất bại</h2>
+                <p class="lead">Rất tiếc, giao dịch của bạn không thành công. Vui lòng thử lại sau.</p>
+
+                @if (!string.IsNullOrEmpty(OrderId))
+                {
+                    <p><strong>Mã đơn hàng:</strong> @OrderId</p>
+                }
+
+                <div class="mt-4">
+                    <a href="/customer-menu" class="btn btn-danger btn-lg px-5 me-3">
+                        <i class="bi bi-arrow-left"></i> Thử đặt lại
+                    </a>
+                    <a href="/" class="btn btn-secondary btn-lg px-5">
+                        Về trang chủ
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public string? OrderId { get; set; }
+}

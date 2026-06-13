@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "QuanLyNhaHang_DotNet",
   "resources": {
-    "hash": "sha256-7KJ425Xzc440MWrP/a15L1HD5gLJVX5oyuFiPiJV/wE=",
+    "hash": "sha256-TbzeYvLmGlz+k2FCN8WKCpJE88tySjGG9gpW88vwWNQ=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-xNQsYHtL1vcbrVTHDZAwJM4WovpoyjsrM2C6FQ8cW1w="
     },
@@ -20,6 +20,7 @@
     "assembly": {
       "Microsoft.AspNetCore.Authorization.wasm": "sha256-g81inugSrrLKEtyxg9JkSxiBc3dly3FZcTKaz72rU/U=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-4/ecRnxEzB060rvNFk3n/GL1s3361WaHeLmfoea+Mp8=",
+      "Microsoft.AspNetCore.Components.Authorization.wasm": "sha256-EFv+L1YnGvKwdvpSUAgxwhBJoxTLebypp66mmnzNKr4=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-y+vSHfxfthNQLuI3YYqbRnwPOD49aCCNjYLZudiE3q4=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-e4hqkIPdVVdFFXvJs2Z6QafKhk12fDzlKQKxa83DtLo=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-iYwWRHCaYqK1f3lFW+fg6B8/gZmo+j33ZABi/MGP+kw=",
@@ -209,10 +210,10 @@
       "mscorlib.wasm": "sha256-RAf5jgXLg+06C4tJ3CabxAZaVjCN2/+E6fxRjRN8yHk=",
       "netstandard.wasm": "sha256-KCAE8RQwTurP5pGnGF819qf9sK++2O0rXzt6tOjlfi8=",
       "System.Private.CoreLib.wasm": "sha256-LQqLbHgeEX4HONx7GwIxGgmzIXP6n2OPxqnq+/4Tyqk=",
-      "QuanLyNhaHang_DotNet.wasm": "sha256-UMMNUKgZDpIXQWEQU8ZxJCZH/96SJiry0rBQoTenEx0="
+      "QuanLyNhaHang_DotNet.wasm": "sha256-HCV29Dja5g2A8hyd1q3o/IBMrqbRyaZRwSS2GMgaras="
     },
     "pdb": {
-      "QuanLyNhaHang_DotNet.pdb": "sha256-N7Gf2NWryZdjhWHSjVAQXcbdkIS3gzLGOSN6RbUO7cA="
+      "QuanLyNhaHang_DotNet.pdb": "sha256-aGNVLANcXNCHLT/DODc0BB97eHUwf3SAmEpWX214tMw="
     }
   },
   "cacheBootResources": true,

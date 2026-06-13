@@ -1,0 +1,15 @@
+/* Hiệu ứng mờ ảo thay thế mang tính tối ưu hiệu năng thay cho jQuery */
+.animate-fade-in[b-88e8vwj44q] {
+    animation: fadeIn-b-88e8vwj44q ease 0.8s;
+    -webkit-animation: fadeIn ease 0.8s;
+}
+
+@keyframes fadeIn-b-88e8vwj44q {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

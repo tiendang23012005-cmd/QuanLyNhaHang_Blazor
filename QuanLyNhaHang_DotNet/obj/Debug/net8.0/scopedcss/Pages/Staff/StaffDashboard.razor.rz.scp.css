@@ -1,0 +1,676 @@
+/* ======== THANH HEADER QUÁN THƯƠNG HIỆU MỚI ======== */
+.restaurant-header[b-2if5gwwg1t] {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.logo-area[b-2if5gwwg1t] {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+    .logo-area i[b-2if5gwwg1t] {
+        font-size: 26px;
+        color: #f39c12;
+    }
+
+    .logo-area h1[b-2if5gwwg1t] {
+        font-size: 22px;
+        margin: 0;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+    }
+
+.user-profile[b-2if5gwwg1t] {
+    font-size: 14px;
+    background: rgba(255,255,255,0.15);
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+/* CONTAINER TỔNG THỂ */
+.dashboard-container[b-2if5gwwg1t] {
+    display: flex;
+    height: calc(100vh - 65px);
+    background-color: #f4f6f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ======== CỘT TRÁI: SƠ ĐỒ PHỤC VỤ ======== */
+.tables-section[b-2if5gwwg1t] {
+    flex: 6;
+    border-right: 1px solid #e0e0e0;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.section-title h2[b-2if5gwwg1t] {
+    font-size: 18px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* KHU VỰC MANG VỀ RIÊNG BIỆT */
+.takeaway-box[b-2if5gwwg1t] {
+    margin-bottom: 25px;
+    max-width: 200px;
+}
+
+.status-takeaway[b-2if5gwwg1t] {
+    border: 2px dashed #e67e22 !important;
+    background-color: #fff5eb !important;
+    color: #e67e22 !important;
+}
+
+/* LƯỚI SƠ ĐỒ BÀN */
+.grid-tables[b-2if5gwwg1t] {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 15px;
+}
+
+.table-card[b-2if5gwwg1t] {
+    background: #fff;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 15px 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+    .table-card:hover[b-2if5gwwg1t] {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+/* Trạng thái màu sắc bàn ăn */
+.status-trong[b-2if5gwwg1t] {
+    border-left: 5px solid #2ecc71;
+}
+
+.status-phuc-vu[b-2if5gwwg1t] {
+    border-left: 5px solid #e74c3c;
+    background-color: #fdf2f2;
+}
+
+.active-selection[b-2if5gwwg1t] {
+    box-shadow: 0 0 0 3px #2a5298 !important;
+    transform: scale(1.03);
+}
+
+.icon-ban[b-2if5gwwg1t] {
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+.table-number[b-2if5gwwg1t] {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+.table-status[b-2if5gwwg1t] {
+    font-size: 11px;
+    color: #7f8c8d;
+    margin-top: 4px;
+    display: inline-block;
+}
+
+/* ======== CỘT PHẢI: CHI TIẾT HÓA ĐƠN ======== */
+.orders-section[b-2if5gwwg1t] {
+    flex: 4;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.02);
+}
+
+.empty-state[b-2if5gwwg1t] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #95a5a6;
+    padding: 30px;
+    text-align: center;
+}
+
+    .empty-state i[b-2if5gwwg1t] {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+
+.btn-primary-action[b-2if5gwwg1t] {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.bill-wrapper[b-2if5gwwg1t] {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px;
+}
+
+.bill-header[b-2if5gwwg1t] {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 12px;
+    margin-bottom: 15px;
+}
+
+.badge-process[b-2if5gwwg1t] {
+    background: #e74c3c;
+    color: white;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    vertical-align: middle;
+}
+
+.ma-don[b-2if5gwwg1t] {
+    font-size: 12px;
+    color: #7f8c8d;
+}
+
+.btn-them-mon[b-2if5gwwg1t] {
+    width: 100%;
+    padding: 10px;
+    background-color: #2a5298;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+/* DANH SÁCH MÓN ĂN */
+.bill-items-list[b-2if5gwwg1t] {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 15px;
+}
+
+.bill-item[b-2if5gwwg1t] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.item-info[b-2if5gwwg1t] {
+    flex: 2;
+}
+
+.item-name[b-2if5gwwg1t] {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.item-price[b-2if5gwwg1t] {
+    font-size: 12px;
+    color: #7f8c8d;
+}
+
+.item-qty-control[b-2if5gwwg1t] {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.qty-btn[b-2if5gwwg1t] {
+    background: #f4f6f9;
+    border: none;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.qty-input[b-2if5gwwg1t] {
+    width: 30px;
+    text-align: center;
+    border: none;
+    font-weight: bold;
+}
+
+.item-total[b-2if5gwwg1t] {
+    flex: 1;
+    text-align: right;
+    font-weight: bold;
+    color: #2a5298;
+}
+
+/* PHẦN TỔNG TIỀN */
+.bill-summary[b-2if5gwwg1t] {
+    border-top: 2px dashed #ccc;
+    padding-top: 12px;
+}
+
+.summary-row[b-2if5gwwg1t] {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+.total-row[b-2if5gwwg1t] {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+.total-price[b-2if5gwwg1t] {
+    color: #e74c3c;
+    font-size: 20px;
+}
+
+/* HÀNH ĐỘNG POS */
+.bill-actions[b-2if5gwwg1t] {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.8fr;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-huy[b-2if5gwwg1t] {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.btn-in[b-2if5gwwg1t] {
+    background: #747d8c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-thanhtoan[b-2if5gwwg1t] {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* MODAL OVERLAY */
+.modal-overlay[b-2if5gwwg1t] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content[b-2if5gwwg1t] {
+    background: #fff;
+    border-radius: 12px;
+    width: 650px;
+    max-width: 90%;
+    padding: 25px;
+}
+
+.modal-header[b-2if5gwwg1t] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.btn-close[b-2if5gwwg1t] {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.menu-table[b-2if5gwwg1t] {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+    .menu-table th[b-2if5gwwg1t], .menu-table td[b-2if5gwwg1t] {
+        padding: 12px;
+        border-bottom: 1px solid #eee;
+        text-align: left;
+    }
+
+.txt-price[b-2if5gwwg1t] {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+.btn-add-item[b-2if5gwwg1t] {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.text-center[b-2if5gwwg1t] {
+    text-align: center;
+}
+
+.justify-center[b-2if5gwwg1t] {
+    justify-content: center !important;
+}
+
+.font-bold[b-2if5gwwg1t] {
+    font-weight: bold;
+}
+
+.modal-confirm-content[b-2if5gwwg1t] {
+    background: #fff;
+    border-radius: 12px;
+    width: 420px;
+    max-width: 90%;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: slideUp-b-2if5gwwg1t 0.25s ease-out;
+}
+
+@keyframes slideUp-b-2if5gwwg1t {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-confirm-header[b-2if5gwwg1t] {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+    .modal-confirm-header.danger[b-2if5gwwg1t] {
+        color: #dc3545;
+    }
+
+    .modal-confirm-header.success[b-2if5gwwg1t] {
+        color: #28a745;
+    }
+
+.modal-confirm-body[b-2if5gwwg1t] {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.modal-confirm-footer[b-2if5gwwg1t] {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+    .modal-confirm-footer button[b-2if5gwwg1t] {
+        padding: 10px 18px;
+        border-radius: 6px;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+.btn-cancel[b-2if5gwwg1t] {
+    background: #e0e0e0;
+    color: #333;
+}
+
+.btn-confirm[b-2if5gwwg1t] {
+    background: #dc3545;
+    color: white;
+}
+
+.btn-no-print[b-2if5gwwg1t] {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-yes-print[b-2if5gwwg1t] {
+    background: #28a745;
+    color: white;
+    font-size: 15px;
+}
+
+/* PHÔI HOÁ ĐƠN ĐIỆN TỬ POS */
+.modal-content-invoice[b-2if5gwwg1t] {
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    width: 340px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+.invoice-pos-paper[b-2if5gwwg1t] {
+    background: #fff;
+    color: #000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    line-height: 1.4;
+    padding: 5px;
+}
+
+.restaurant-name[b-2if5gwwg1t] {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 0 4px 0;
+}
+
+.restaurant-info[b-2if5gwwg1t] {
+    text-align: center;
+    font-size: 11px;
+    margin: 0;
+    color: #444;
+}
+
+.invoice-title[b-2if5gwwg1t] {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 12px 0 6px 0;
+}
+
+.invoice-meta[b-2if5gwwg1t] {
+    text-align: center;
+    font-size: 12px;
+    margin: 0;
+}
+
+.invoice-info[b-2if5gwwg1t] {
+    margin: 15px 0 10px 0;
+    font-size: 13px;
+}
+
+    .invoice-info p[b-2if5gwwg1t] {
+        margin: 3px 0;
+    }
+
+.dashed-line[b-2if5gwwg1t] {
+    border-top: 1px dashed #000;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.invoice-table[b-2if5gwwg1t] {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+    .invoice-table th[b-2if5gwwg1t] {
+        border-bottom: 1px dashed #000;
+        padding-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .invoice-table td[b-2if5gwwg1t] {
+        padding: 6px 0;
+        vertical-align: top;
+    }
+
+.food-name[b-2if5gwwg1t] {
+    max-width: 140px;
+    word-break: break-word;
+}
+
+.invoice-summary[b-2if5gwwg1t] {
+    margin-top: 10px;
+}
+
+.summary-line[b-2if5gwwg1t] {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 0;
+}
+
+.total-pay[b-2if5gwwg1t] {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.invoice-footer[b-2if5gwwg1t] {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.thank-you[b-2if5gwwg1t] {
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.powered-by[b-2if5gwwg1t] {
+    font-size: 9px;
+    color: #777;
+    margin: 0;
+}
+
+.modal-footer-tools[b-2if5gwwg1t] {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid #eee;
+    padding-top: 12px;
+}
+
+.btn-close-view[b-2if5gwwg1t] {
+    flex: 1;
+    padding: 10px;
+    background: #eee;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-trigger-print[b-2if5gwwg1t] {
+    flex: 2;
+    padding: 10px;
+    background: #6a5af9;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* @media print */
+@media print {
+    body[b-2if5gwwg1t] {
+        background: white !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .tables-section[b-2if5gwwg1t],
+    .orders-section[b-2if5gwwg1t],
+    .no-print[b-2if5gwwg1t],
+    .modal-footer-tools[b-2if5gwwg1t] {
+        display: none !important;
+        visibility: hidden !important;
+    }
+
+    .dashboard-container[b-2if5gwwg1t] {
+        display: block !important;
+        height: auto !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+    }
+
+    .invoice-print-modal[b-2if5gwwg1t] {
+        position: absolute !important;
+        left: 0 !important;
+        top: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        background: white !important;
+        display: block !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .modal-content-invoice[b-2if5gwwg1t] {
+        border: none !important;
+        box-shadow: none !important;
+        width: 76mm !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 auto !important;
+    }
+
+    .invoice-pos-paper[b-2if5gwwg1t] {
+        font-size: 12px !important;
+        width: 100% !important;
+    }
+}

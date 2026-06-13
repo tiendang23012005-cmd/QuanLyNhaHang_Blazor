@@ -1,0 +1,175 @@
+﻿@page "/admin/revenue"
+@layout AdminLayout
+@using RestaurantManagement.Frontend.Models
+@using System.Net.Http.Json
+@inject HttpClient Http
+@inject IJSRuntime JS
+
+<div class="revenue-container">
+
+    <div class="header">
+        <div>
+            <small>BÁO CÁO DOANH THU</small>
+            <h2>Tổng quan doanh thu</h2>
+            <p>Theo dõi tình hình hoạt động kinh doanh của nhà hàng</p>
+        </div>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-icon">💰</div>
+            <div>
+                <div class="stat-value">@TotalRevenue.ToString("N0") đ</div>
+                <div class="stat-title">Tổng doanh thu</div>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">🧾</div>
+            <div>
+                <div class="stat-value">@TotalBills.ToString("N0")</div>
+                <div class="stat-title">Tổng hóa đơn</div>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">👥</div>
+            <div>
+                <div class="stat-value">@TotalCustomers.ToString("N0")</div>
+                <div class="stat-title">Tổng khách phục vụ</div>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">🎯</div>
+            <div>
+                <div class="stat-value">@Progress%</div>
+                <div class="stat-title">Tiến độ mục tiêu tháng</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="progress-card">
+        <div class="progress-header">
+            <span>Mục tiêu tháng</span>
+            <span>@Progress%</span>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: @(Progress)%"></div>
+        </div>
+    </div>
+
+    <div class="chart-card">
+        <h3>Biểu đồ doanh thu theo tháng</h3>
+        <div class="chart">
+            @foreach (var item in MonthlyRevenue)
+            {
+                <div class="chart-item">
+                    <div class="bar" style="height: @GetBarHeight(item.Revenue)"></div>
+                    <span>@item.Month</span>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="table-card">
+        <h3>Báo cáo chi tiết</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>THÁNG</th>
+                    <th>DOANH THU</th>
+                    <th>HÓA ĐƠN</th>
+                    <th>KHÁCH</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in RevenueDetails)
+                {
+                    <tr>
+                        <td>@item.Month</td>
+                        <td>@item.Revenue.ToString("N0") đ</td>
+                        <td>@item.Bills.ToString("N0")</td>
+                        <td>@item.Customers.ToString("N0")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@code {
+    // Khởi tạo các trường dữ liệu tương thích hoàn toàn với cấu trúc Angular cũ
+    private decimal TotalRevenue { get; set; } = 0;
+    private int TotalBills { get; set; } = 0;
+    private int TotalCustomers { get; set; } = 0;
+    private decimal MonthlyTarget { get; set; } = 100000000;
+
+    private List<MonthlyRevenueItem> MonthlyRevenue { get; set; } = new();
+    private List<RevenueDetailItem> RevenueDetails { get; set; } = new();
+
+    // Thuộc tính tính toán xử lý tiến độ (Tương đương get Progress() bên Angular)
+    private int Progress
+    {
+        get
+        {
+            if (MonthlyTarget == 0) return 0;
+            return (int)Math.Round((TotalRevenue / MonthlyTarget) * 100);
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        InitDefaultData();
+        await LoadRevenueData();
+    }
+
+    private void InitDefaultData()
+    {
+        // Thiết lập cấu trúc khung ban đầu như phía Angular cũ
+        for (int i = 1; i <= 12; i++)
+        {
+            MonthlyRevenue.Add(new MonthlyRevenueItem { Month = $"T{i}", Revenue = 0 });
+            RevenueDetails.Add(new RevenueDetailItem { Month = $"Tháng {i}", Revenue = 0, Bills = 0, Customers = 0 });
+        }
+    }
+
+    private async Task LoadRevenueData()
+    {
+        try
+        {
+            // Điểm kết nối API (Hãy thay đổi endpoint nếu thực tế của bạn khác)
+            var response = await Http.GetFromJsonAsync<RevenueSummaryDto>("https://localhost:7043/api/RevenueManagement");
+            if (response != null)
+            {
+                TotalRevenue = response.TotalRevenue;
+                TotalBills = response.TotalBills;
+                TotalCustomers = response.TotalCustomers;
+                if (response.MonthlyTarget > 0) MonthlyTarget = response.MonthlyTarget;
+
+                if (response.MonthlyRevenue != null && response.MonthlyRevenue.Any())
+                    MonthlyRevenue = response.MonthlyRevenue;
+
+                if (response.RevenueDetails != null && response.RevenueDetails.Any())
+                    RevenueDetails = response.RevenueDetails;
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Lỗi kết nối API Doanh thu: {ex.Message}");
+            // Nếu API Backend chưa sẵn sàng, Blazor giữ nguyên MockData bằng 0 để giao diện không bị lỗi đổ vỡ
+        }
+    }
+
+    // Tính toán chiều cao cột đồ thị trực quan (Dynamic Inline Style)
+    private string GetBarHeight(decimal revenue)
+    {
+        if (TotalRevenue == 0) return "5px";
+
+        // Tính tỷ lệ cột dựa trên tổng doanh thu hoặc mục tiêu để biểu đồ hiển thị đẹp mắt
+        decimal heightPercentage = (revenue / TotalRevenue) * 200;
+        double finalHeight = Math.Max((double)heightPercentage, 5.0);
+
+        return $"{finalHeight}px";
+    }
+}

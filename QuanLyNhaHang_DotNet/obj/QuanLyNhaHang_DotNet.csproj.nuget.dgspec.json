@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj": {}
+    "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj": {}
   },
   "projects": {
-    "D:\\C#_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj": {
+    "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj",
+        "projectUniqueName": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj",
         "projectName": "QuanLyNhaHang_DotNet",
-        "projectPath": "D:\\C#_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj",
+        "projectPath": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj",
         "packagesPath": "C:\\Users\\VAN TIEN\\.nuget\\packages\\",
-        "outputPath": "D:\\C#_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\",
+        "outputPath": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,6 +50,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Components.Authorization": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
               "version": "[8.0.13, )"
