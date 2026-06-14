@@ -1,7 +1,6 @@
 ﻿@page "/staff-dashboard"
 @using QuanLyNhaHang_DotNet.Models
 @using QuanLyNhaHang_DotNet.Services
-@using System.Timers
 @using System.Text.Json
 @inject NhanVienService NhanVienService
 @inject HttpClient Http
@@ -11,22 +10,22 @@
 
 @if (!isAuthorized)
 {
-    <div class="loading-auth-container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; background-color: #f8f9fa;">
+    <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;background:#f8f9fa">
         <div class="spinner-border text-warning mb-3" role="status"></div>
-        <h5 class="text-secondary fw-semibold">Đang kiểm tra quyền truy cập hệ thống POS...</h5>
+        <h5 class="text-secondary fw-semibold">Đang kiểm tra quyền truy cập...</h5>
     </div>
 }
 else
 {
     <div class="dashboard-container">
+
+        @* SƠ ĐỒ BÀN *@
         <div class="tables-section">
-            <div class="section-title">
-                <h2>Sơ đồ phục vụ POS</h2>
-            </div>
+            <div class="section-title"><h2>Sơ đồ phục vụ POS</h2></div>
 
             <div class="takeaway-box">
-                <div class="table-card status-takeaway @(banDangChon != null && banDangChon.MaBan == 0 ? "active-selection" : "")"
-                     @onclick="() => ChonMangVe()">
+                <div class="table-card status-takeaway @(banDangChon?.MaBan == 0 ? "active-selection" : "")"
+                     @onclick="ChonMangVe">
                     <div class="icon-ban"><i class="fas fa-shopping-bag"></i></div>
                     <span class="table-number">MANG VỀ</span>
                     <span class="table-status">Bấm xử lý nhanh</span>
@@ -42,7 +41,7 @@ else
                 <div class="grid-tables">
                     @foreach (var ban in danhSachBan)
                     {
-                        <div class="table-card @(ban.TrangThaiBan == "Trống" ? "status-trong" : "status-phuc-vu") @(banDangChon != null && banDangChon.MaBan == ban.MaBan ? "active-selection" : "")"
+                        <div class="table-card @(ban.TrangThaiBan == "Trống" ? "status-trong" : "status-phuc-vu") @(banDangChon?.MaBan == ban.MaBan ? "active-selection" : "")"
                              @onclick="async () => await ChonBan(ban)">
                             <div class="icon-ban"><i class="fas fa-users"></i></div>
                             <span class="table-number">@ban.SoBan</span>
@@ -53,12 +52,13 @@ else
             }
         </div>
 
+        @* PANEL ĐƠN HÀNG *@
         <div class="orders-section">
             @if (banDangChon == null)
             {
                 <div class="empty-state">
                     <i class="fas fa-arrow-left"></i>
-                    <p>Vui lòng chọn một bàn hoặc ô "Mang Về" để kiểm tra hóa đơn</p>
+                    <p>Vui lòng chọn một bàn hoặc ô "Mang Về"</p>
                 </div>
             }
             else if (donHangHienTai == null)
@@ -66,7 +66,7 @@ else
                 <div class="empty-state">
                     <h3>@banDangChon.SoBan</h3>
                     <p class="txt-warning">Hiện tại chưa có hóa đơn nào.</p>
-                    <button class="btn-primary-action" @onclick="() => MoModalThemMon()">
+                    <button class="btn-primary-action" @onclick="MoModalThemMon">
                         <i class="fas fa-plus"></i> Tạo hóa đơn & Gọi món ngay
                     </button>
                 </div>
@@ -79,30 +79,25 @@ else
                         <span class="ma-don">Mã HĐ: #@donHangHienTai.MaDonHang</span>
                     </div>
 
-                    <button class="btn-them-mon" @onclick="() => MoModalThemMon()">
+                    <button class="btn-them-mon" @onclick="MoModalThemMon">
                         <i class="fas fa-cart-plus"></i> Thêm món ăn vào đơn
                     </button>
 
                     <div class="bill-items-list">
-                        @if (donHangHienTai.ChiTietDonHangs != null)
+                        @foreach (var item in donHangHienTai.ChiTietDonHangs ?? new())
                         {
-                            @foreach (var item in donHangHienTai.ChiTietDonHangs)
-                            {
-                                <div class="bill-item">
-                                    <div class="item-info">
-                                        <span class="item-name">@item.TenMonAn</span>
-                                        <span class="item-price">@item.GiaLucDat.ToString("N0")đ</span>
-                                    </div>
-                                    <div class="item-qty-control">
-                                        <button class="qty-btn" @onclick="() => ThayDoiSoLuong(item.MaChiTiet, item.SoLuong, -1)">-</button>
-                                        <input type="text" class="qty-input" value="@item.SoLuong" readonly />
-                                        <button class="qty-btn" @onclick="() => ThayDoiSoLuong(item.MaChiTiet, item.SoLuong, 1)">+</button>
-                                    </div>
-                                    <div class="item-total">
-                                        @item.ThanhTien.ToString("N0")đ
-                                    </div>
+                            <div class="bill-item">
+                                <div class="item-info">
+                                    <span class="item-name">@item.TenMonAn</span>
+                                    <span class="item-price">@item.GiaLucDat.ToString("N0")đ</span>
                                 </div>
-                            }
+                                <div class="item-qty-control">
+                                    <button class="qty-btn" @onclick="() => ThayDoiSoLuong(item.MaChiTiet, item.SoLuong, -1)">-</button>
+                                    <input type="text" class="qty-input" value="@item.SoLuong" readonly />
+                                    <button class="qty-btn" @onclick="() => ThayDoiSoLuong(item.MaChiTiet, item.SoLuong, 1)">+</button>
+                                </div>
+                                <div class="item-total">@item.ThanhTien.ToString("N0")đ</div>
+                            </div>
                         }
                     </div>
 
@@ -122,11 +117,11 @@ else
                     </div>
 
                     <div class="bill-actions">
-                        <button class="btn-huy" @onclick="() => HuyDonHang()">
+                        <button class="btn-huy" @onclick="HuyDonHang">
                             <i class="fas fa-trash-alt"></i> Xóa đơn
                         </button>
-                        <button class="btn-in" @onclick="() => InTamTinh()">In tạm tính</button>
-                        <button class="btn-thanhtoan" @onclick="() => YeuCauThanhToan()">Thanh toán (F9)</button>
+                        <button class="btn-in" @onclick="InTamTinh">In tạm tính</button>
+                        <button class="btn-thanhtoan" @onclick="YeuCauThanhToan">Thanh toán (F9)</button>
                     </div>
                 </div>
             }
@@ -134,26 +129,27 @@ else
     </div>
 }
 
+@* MODAL THÊM MÓN *@
 @if (hienThiModalThemMon)
 {
     <div class="modal-overlay">
         <div class="modal-content">
             <div class="modal-header">
                 <h3>Danh sách thực đơn nhà hàng</h3>
-                <button class="btn-close" @onclick="() => DongModalThemMon()">&times;</button>
+                <button class="btn-close" @onclick="DongModalThemMon">&times;</button>
             </div>
             <div class="modal-body">
                 <table class="menu-table">
                     <thead>
                         <tr>
                             <th>Mã món</th>
-                            <th>Tên món ăn đặc sản</th>
+                            <th>Tên món ăn</th>
                             <th>Đơn giá</th>
                             <th>Thao tác</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @if (danhSachMonAn != null && danhSachMonAn.Any())
+                        @if (danhSachMonAn.Any())
                         {
                             @foreach (var mon in danhSachMonAn)
                             {
@@ -163,7 +159,7 @@ else
                                     <td class="txt-price">@mon.Gia.ToString("N0")đ</td>
                                     <td>
                                         <button class="btn-add-item" @onclick="() => ThemMonVaoDon(mon)">
-                                            <i class="fas fa-plus-circle"></i> Thêm vào đơn
+                                            <i class="fas fa-plus-circle"></i> Thêm
                                         </button>
                                     </td>
                                 </tr>
@@ -171,11 +167,7 @@ else
                         }
                         else
                         {
-                            <tr>
-                                <td colspan="4" class="text-center text-muted py-3">
-                                    ⏳ Đang tải dữ liệu thực đơn nhà hàng...
-                                </td>
-                            </tr>
+                            <tr><td colspan="4" class="text-center text-muted py-3">⏳ Đang tải thực đơn...</td></tr>
                         }
                     </tbody>
                 </table>
@@ -184,6 +176,7 @@ else
     </div>
 }
 
+@* MODAL XÁC NHẬN THANH TOÁN *@
 @if (hienThiModalXacNhanThanhToan)
 {
     <div class="modal-overlay no-print">
@@ -192,18 +185,19 @@ else
                 <i class="fas fa-exclamation-circle"></i> XÁC NHẬN THANH TOÁN
             </div>
             <div class="modal-confirm-body">
-                Bạn có chắc chắn muốn thanh toán đơn hàng cho <strong>@banDangChon?.SoBan</strong>?<br>
-                Hành động này sẽ chốt doanh thu và đưa bàn này về trạng thái <strong>Trống</strong>.
+                Bạn có chắc muốn thanh toán đơn hàng cho <strong>@banDangChon?.SoBan</strong>?<br />
+                Bàn sẽ được chuyển về trạng thái <strong>Trống</strong>.
             </div>
             <div class="modal-confirm-footer">
-                <button class="btn-cancel" @onclick="() => DongModalXacNhanThanhToan()">Hủy bỏ</button>
-                <button class="btn-confirm" @onclick="() => ThucHienThanhToanAPI()">Đồng ý thanh toán</button>
+                <button class="btn-cancel" @onclick="() => hienThiModalXacNhanThanhToan = false">Hủy bỏ</button>
+                <button class="btn-confirm" @onclick="ThucHienThanhToanAPI">Đồng ý thanh toán</button>
             </div>
         </div>
     </div>
 }
 
-@if (hienThiModalHoiInSauThanhToan)
+@* MODAL HỎI IN SAU THANH TOÁN *@
+@if (hienThiModalHoiIn)
 {
     <div class="modal-overlay no-print">
         <div class="modal-confirm-content">
@@ -211,14 +205,14 @@ else
                 <i class="fas fa-check-circle"></i> THANH TOÁN THÀNH CÔNG!
             </div>
             <div class="modal-confirm-body text-center">
-                Đơn hàng đã được lưu xử lý thành công.<br>
-                Bạn có muốn kết xuất dữ liệu và <strong>In hóa đơn thanh toán</strong> ngay không?
+                Đơn hàng đã được lưu thành công.<br />
+                Bạn có muốn <strong>In hóa đơn thanh toán</strong> ngay không?
             </div>
             <div class="modal-confirm-footer justify-center">
-                <button class="btn-no-print" @onclick="() => BoQuaInHoaDon()">
+                <button class="btn-no-print" @onclick="BoQuaIn">
                     <i class="fas fa-times"></i> Không cần in
                 </button>
-                <button class="btn-yes-print" @onclick="() => DongYInHoaDonRaGiay()">
+                <button class="btn-yes-print" @onclick="DongYIn">
                     <i class="fas fa-print"></i> Có, In hóa đơn
                 </button>
             </div>
@@ -226,9 +220,10 @@ else
     </div>
 }
 
+@* MODAL XEM & IN HÓA ĐƠN *@
 @if (hienThiModalIn)
 {
-    <div class="modal-overlay invoice-print-modal" @onclick="() => DongModalInView()">
+    <div class="modal-overlay invoice-print-modal" @onclick="DongModalIn">
         <div class="modal-content-invoice" @onclick:stopPropagation>
             <div class="invoice-pos-paper">
                 <div class="invoice-header">
@@ -236,12 +231,9 @@ else
                     <p class="restaurant-info">ĐC: 123 Nguyễn Huệ, TP. Quy Nhơn</p>
                     <p class="restaurant-info">ĐT: 0905.XXX.XXX</p>
                     <div class="dashed-line"></div>
-
-                    <h2 class="invoice-title">
-                        @(loaiIn == "tam-tinh" ? "PHIẾU TẠM TÍNH" : "HÓA ĐƠN THANH TOÁN")
-                    </h2>
+                    <h2 class="invoice-title">@(loaiIn == "tam-tinh" ? "PHIẾU TẠM TÍNH" : "HÓA ĐƠN THANH TOÁN")</h2>
                     <p class="invoice-meta">Mã HĐ: #@donHangHienTai?.MaDonHang</p>
-                    <p class="invoice-meta">Thời gian: @ngayInHienTai.ToString("dd/MM/yyyy HH:mm")</p>
+                    <p class="invoice-meta">Thời gian: @ngayIn.ToString("dd/MM/yyyy HH:mm")</p>
                 </div>
 
                 <div class="invoice-info">
@@ -251,7 +243,7 @@ else
 
                 <div class="dashed-line"></div>
 
-                <table class="invoice-table" style="width:100%; table-layout:fixed;">
+                <table class="invoice-table" style="width:100%;table-layout:fixed">
                     <colgroup>
                         <col style="width:42%" />
                         <col style="width:10%" />
@@ -267,20 +259,14 @@ else
                         </tr>
                     </thead>
                     <tbody>
-                        @if (donHangHienTai?.ChiTietDonHangs != null)
+                        @foreach (var item in donHangHienTai?.ChiTietDonHangs ?? new())
                         {
-                            @foreach (var item in donHangHienTai.ChiTietDonHangs)
-                            {
-                                <tr>
-                                    <td align="left" class="food-name"
-                                        style="word-wrap:break-word; word-break:break-word; white-space:normal;">
-                                        @item.TenMonAn
-                                    </td>
-                                    <td align="center">@item.SoLuong</td>
-                                    <td align="right">@item.GiaLucDat.ToString("N0")</td>
-                                    <td align="right" class="font-bold">@item.ThanhTien.ToString("N0")</td>
-                                </tr>
-                            }
+                            <tr>
+                                <td align="left" style="word-break:break-word;white-space:normal">@item.TenMonAn</td>
+                                <td align="center">@item.SoLuong</td>
+                                <td align="right">@item.GiaLucDat.ToString("N0")</td>
+                                <td align="right" class="font-bold">@item.ThanhTien.ToString("N0")</td>
+                            </tr>
                         }
                     </tbody>
                 </table>
@@ -311,11 +297,12 @@ else
             </div>
 
             <div class="modal-footer-tools no-print">
-                <button class="btn-close-view" @onclick="() => DongModalInView()">
+                <button class="btn-close-view" @onclick="DongModalIn">
                     <i class="fas fa-arrow-left"></i> Quay lại
                 </button>
-                <button class="btn-trigger-print" @onclick="() => KichHoatLenhIn()">
-                    <i class="fas fa-print"></i> Bấm để in ra giấy
+                @* Trong HTML — đổi thành gọi hàm *@
+                <button class="btn-trigger-print" @onclick="KichHoatIn">
+                    <i class="fas fa-print"></i> In ra giấy
                 </button>
             </div>
         </div>
@@ -323,223 +310,150 @@ else
 }
 
 @code {
+    // State
     private List<BanAnDto> danhSachBan = new();
-    private BanAnDto banDangChon = null;
-    private DonHangHienTaiDto donHangHienTai = null;
     private List<MonAn> danhSachMonAn = new();
+    private BanAnDto? banDangChon;
+    private DonHangHienTaiDto? donHangHienTai;
 
+    // UI flags
     private bool isLoading = true;
     private bool isAuthorized = true;
-    private bool hienThiModalThemMon = false;
+    private bool hienThiModalThemMon;
+    private bool hienThiModalXacNhanThanhToan;
+    private bool hienThiModalHoiIn;
+    private bool hienThiModalIn;
 
-    private bool hienThiModalIn = false;
+    // In hóa đơn
     private string loaiIn = "tam-tinh";
-    private bool hienThiModalXacNhanThanhToan = false;
-    private bool hienThiModalHoiInSauThanhToan = false;
-    private DateTime ngayInHienTai = DateTime.Now;
+    private DateTime ngayIn = DateTime.Now;
 
-    private System.Threading.Timer pollingTimer;
+    // Polling
+    private System.Threading.Timer? pollingTimer;
 
     protected override async Task OnInitializedAsync()
     {
-        await LoadDanhSachBan();
-        await LoadDanhSachMonAn();
+        await Task.WhenAll(LoadDanhSachBan(), LoadDanhSachMonAn());
 
         pollingTimer = new System.Threading.Timer(async _ =>
-        {
             await InvokeAsync(async () =>
             {
-                try
-                {
-                    await LoadDanhSachBan();
-                    if (banDangChon != null)
-                    {
-                        await RefreshDonHangHienTai(banDangChon.MaBan);
-                    }
-                    StateHasChanged();
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Lỗi đồng bộ định kỳ: {ex.Message}");
-                }
-            });
-        }, null, 5000, 5000);
+                await LoadDanhSachBan();
+                if (banDangChon != null)
+                    await RefreshDonHang(banDangChon.MaBan);
+                StateHasChanged();
+            }),
+        null, 15_000, 15_000);
     }
 
     private async Task LoadDanhSachBan()
     {
-        try
-        {
-            // Sử dụng NhanVienService thay vì gọi Http trực tiếp
-            var res = await NhanVienService.GetDanhSachBanAsync();
-            if (res != null && res.IsSuccess)
-            {
-                danhSachBan = res.Data ?? new();
-            }
-        }
-        catch (Exception ex) { Console.WriteLine(ex.Message); }
-        finally { isLoading = false; }
+        var res = await NhanVienService.GetDanhSachBanAsync();
+        if (res?.IsSuccess == true) danhSachBan = res.Data ?? new();
+        isLoading = false;
     }
 
     private async Task LoadDanhSachMonAn()
     {
         try
         {
-            // ✅ Thử parse trực tiếp array trước
-            var result = await Http.GetFromJsonAsync<List<MonAn>>("api/MonAn");
-            if (result != null && result.Any())
-            {
-                danhSachMonAn = result;
-                await InvokeAsync(StateHasChanged);
-                return;
-            }
-        }
-        catch { }
+            var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+            var json = await Http.GetStringAsync("https://localhost:7043/api/MonAn");
 
-        try
-        {
-            // ✅ Nếu API bọc trong wrapper { data: [...] } thì parse kiểu này
-            var wrapper = await Http.GetFromJsonAsync<ApiWrapper<List<MonAn>>>("api/MonAn");
-            if (wrapper?.Data != null)
-            {
-                danhSachMonAn = wrapper.Data;
-            }
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"[LỖI TẢI THỰC ĐƠN]: {ex.Message}");
-        }
-        finally
-        {
-            await InvokeAsync(StateHasChanged);
-        }
-    }
+            using var doc = JsonDocument.Parse(json);
+            var root = doc.RootElement;
 
-    // ✅ THÊM class wrapper
-    public class ApiWrapper<T>
-    {
-        public T? Data { get; set; }
-        public bool IsSuccess { get; set; }
+            danhSachMonAn = root.ValueKind == JsonValueKind.Array
+                ? JsonSerializer.Deserialize<List<MonAn>>(json, options) ?? new()
+                : root.TryGetProperty("data", out var prop) || root.TryGetProperty("Data", out prop)
+                    ? JsonSerializer.Deserialize<List<MonAn>>(prop.GetRawText(), options) ?? new()
+                    : new();
+        }
+        catch (Exception ex) { Console.WriteLine($"Lỗi tải thực đơn: {ex.Message}"); }
     }
 
     private async Task ChonBan(BanAnDto ban)
     {
         banDangChon = ban;
-        await RefreshDonHangHienTai(ban.MaBan);
+        await RefreshDonHang(ban.MaBan);
     }
 
     private async Task ChonMangVe()
     {
         banDangChon = new BanAnDto { MaBan = 0, SoBan = "Đơn Mang Về", TrangThaiBan = "Mang về" };
-        await RefreshDonHangHienTai(0);
+        await RefreshDonHang(0);
     }
 
-    private async Task RefreshDonHangHienTai(int maBan)
-    {
-        // Hàm getDonHangTheoBan trong Angular trả về trực tiếp DTO không bọc wrapper
-        donHangHienTai = await NhanVienService.GetDonHangTheoBanAsync(maBan);
-    }
+    private async Task RefreshDonHang(int maBan)
+        => donHangHienTai = await NhanVienService.GetDonHangTheoBanAsync(maBan);
 
-    private async Task ThayDoiSoLuong(int maChiTiet, int soLuongHienTai, int thayDoi)
+    private async Task ThayDoiSoLuong(int maChiTiet, int soLuong, int delta)
     {
-        int soLuongMoi = soLuongHienTai + thayDoi;
+        int soLuongMoi = soLuong + delta;
         if (soLuongMoi < 0) return;
-
-        var response = await NhanVienService.CapNhatSoLuongMonAsync(maChiTiet, soLuongMoi);
-        if (response.IsSuccessStatusCode && banDangChon != null)
-        {
-            await RefreshDonHangHienTai(banDangChon.MaBan);
-        }
+        var res = await NhanVienService.CapNhatSoLuongMonAsync(maChiTiet, soLuongMoi);
+        if (res.IsSuccessStatusCode && banDangChon != null)
+            await RefreshDonHang(banDangChon.MaBan);
     }
 
     private async Task ThemMonVaoDon(MonAn mon)
     {
-        int maDonHang = donHangHienTai != null ? donHangHienTai.MaDonHang : 0;
-        int maBan = banDangChon != null ? banDangChon.MaBan : 0;
-
-        var response = await NhanVienService.ThemMonVaoDonHienTaiAsync(maDonHang, mon.MaMonAn, 1, maBan);
-
-        if (response.IsSuccessStatusCode)
+        int maDonHang = donHangHienTai?.MaDonHang ?? 0;
+        int maBan = banDangChon?.MaBan ?? 0;
+        var res = await NhanVienService.ThemMonVaoDonHienTaiAsync(maDonHang, mon.MaMonAn, 1, maBan);
+        if (res.IsSuccessStatusCode && banDangChon != null)
         {
             DongModalThemMon();
-            if (banDangChon != null)
-            {
-                await RefreshDonHangHienTai(banDangChon.MaBan);
-                await LoadDanhSachBan();
-            }
+            await RefreshDonHang(banDangChon.MaBan);
+            await LoadDanhSachBan();
         }
     }
 
     private async Task ThucHienThanhToanAPI()
     {
         if (donHangHienTai == null) return;
-
-        var response = await NhanVienService.XacNhanThanhToanAsync(donHangHienTai.MaDonHang);
-        if (response.IsSuccessStatusCode)
+        var res = await NhanVienService.XacNhanThanhToanAsync(donHangHienTai.MaDonHang);
+        if (res.IsSuccessStatusCode)
         {
             hienThiModalXacNhanThanhToan = false;
-            ngayInHienTai = DateTime.Now;
-            hienThiModalHoiInSauThanhToan = true;
+            ngayIn = DateTime.Now;
+            hienThiModalHoiIn = true;
         }
         else
-        {
-            await JS.InvokeVoidAsync("alert", "Lỗi trong quá trình xử lý thanh toán hóa đơn.");
-        }
+            await JS.InvokeVoidAsync("alert", "Lỗi trong quá trình xử lý thanh toán.");
     }
 
     private async Task HuyDonHang()
     {
         if (donHangHienTai == null) return;
-
-        bool confirm = await JS.InvokeAsync<bool>("confirm", $"CHÚ Ý: Bạn có chắc chắn muốn HỦY/XÓA hoàn toàn hóa đơn của {banDangChon?.SoBan}?");
-        if (confirm)
+        bool ok = await JS.InvokeAsync<bool>("confirm", $"Xác nhận HỦY đơn hàng của {banDangChon?.SoBan}?");
+        if (!ok) return;
+        var res = await NhanVienService.HuyDonHangAsync(donHangHienTai.MaDonHang);
+        if (res.IsSuccessStatusCode)
         {
-            var response = await NhanVienService.HuyDonHangAsync(donHangHienTai.MaDonHang);
-            if (response.IsSuccessStatusCode)
-            {
-                await JS.InvokeVoidAsync("alert", "Hệ thống ghi nhận: Đã hủy đơn hàng thành công!");
-                LamMoiGiaoDienSauThanhToan();
-            }
+            await JS.InvokeVoidAsync("alert", "Đã hủy đơn hàng thành công!");
+            ResetSauThanhToan();
         }
     }
 
-    private void InTamTinh()
-    {
-        if (donHangHienTai == null) return;
-        ngayInHienTai = DateTime.Now;
-        loaiIn = "tam-tinh";
-        hienThiModalIn = true;
-    }
-
+    // Các hàm điều khiển modal gọn
+    private void InTamTinh() { if (donHangHienTai == null) return; ngayIn = DateTime.Now; loaiIn = "tam-tinh"; hienThiModalIn = true; }
     private void YeuCauThanhToan() => hienThiModalXacNhanThanhToan = true;
-    private void DongModalXacNhanThanhToan() => hienThiModalXacNhanThanhToan = false;
-    private void DongYInHoaDonRaGiay()
-    {
-        hienThiModalHoiInSauThanhToan = false;
-        loaiIn = "hoa-don";
-        hienThiModalIn = true;
-    }
-    private void BoQuaInHoaDon()
-    {
-        hienThiModalHoiInSauThanhToan = false;
-        LamMoiGiaoDienSauThanhToan();
-    }
-    private void DongModalInView()
-    {
-        hienThiModalIn = false;
-        if (loaiIn == "hoa-don") LamMoiGiaoDienSauThanhToan();
-    }
-    private async Task KichHoatLenhIn() => await JS.InvokeVoidAsync("window.print");
+    private void DongYIn() { hienThiModalHoiIn = false; loaiIn = "hoa-don"; hienThiModalIn = true; }
+    private void BoQuaIn() { hienThiModalHoiIn = false; ResetSauThanhToan(); }
+    private void DongModalIn() { hienThiModalIn = false; if (loaiIn == "hoa-don") ResetSauThanhToan(); }
+    private void MoModalThemMon() => hienThiModalThemMon = true;
+    private void DongModalThemMon() => hienThiModalThemMon = false;
+    // Trong @code — thêm hàm này
+    private async Task KichHoatIn()
+        => await JS.InvokeVoidAsync("window.print");
 
-    private void LamMoiGiaoDienSauThanhToan()
+    private void ResetSauThanhToan()
     {
         donHangHienTai = null;
         banDangChon = null;
         _ = LoadDanhSachBan();
     }
-
-    private void MoModalThemMon() => hienThiModalThemMon = true;
-    private void DongModalThemMon() => hienThiModalThemMon = false;
 
     public void Dispose() => pollingTimer?.Dispose();
 }

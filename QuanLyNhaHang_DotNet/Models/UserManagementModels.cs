@@ -4,7 +4,7 @@ namespace RestaurantManagement.Frontend.Models
 {
     public class UserModel
     {
-        public int MaNguoiDung { get; set; } // Tương đương UserId từ API
+        public int MaNguoiDung { get; set; }
 
         [Required(ErrorMessage = "Vui lòng nhập họ tên.")]
         [StringLength(100, ErrorMessage = "Họ tên không được vượt quá {1} ký tự.")]

@@ -18,7 +18,6 @@ public class UserSession
     public string Token { get; set; } = string.Empty;
 }
 
-// ✅ THÊM 2 CLASS NÀY
 public class ForgotPasswordRequest
 {
     [Required(ErrorMessage = "Vui lòng nhập email")]

@@ -57,8 +57,6 @@ public class AuthService
         ((CustomAuthStateProvider)_authStateProvider).NotifyUserLogout();
     }
 
-    // ✅ THÊM VÀO CUỐI CLASS AuthService (Blazor)
-
     public async Task<AuthResponse?> ForgotPasswordAsync(string email)
     {
         var response = await _http.PostAsJsonAsync("api/auth/forgot-password",

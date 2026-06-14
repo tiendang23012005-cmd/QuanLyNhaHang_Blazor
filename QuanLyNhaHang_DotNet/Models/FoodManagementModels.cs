@@ -35,7 +35,7 @@ namespace RestaurantManagement.Frontend.Models
         public string TenMonAn { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "Vui lòng chọn danh mục món ăn.")]
-        public int MaDanhMuc { get; set; } = 1; // 1: Món chính
+        public int MaDanhMuc { get; set; } = 1; 
 
         [Required(ErrorMessage = "Vui lòng nhập giá.")]
         [Range(1000, 100000000, ErrorMessage = "Giá món ăn phải lớn hơn 1,000 đ.")]

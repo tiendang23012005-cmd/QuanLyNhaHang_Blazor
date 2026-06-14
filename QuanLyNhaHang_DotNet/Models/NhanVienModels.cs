@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace QuanLyNhaHang_DotNet.Models // Đảm bảo đúng namespace của project Blazor
+namespace QuanLyNhaHang_DotNet.Models 
 {
     public class NhanVienApiResponse<T>
     {

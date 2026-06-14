@@ -16,7 +16,6 @@
 @code {
     protected override async Task OnInitializedAsync()
     {
-        // Bây giờ dòng ép kiểu này sẽ sáng đèn và hoạt động hoàn hảo
         var customProvider = (CustomAuthStateProvider)AuthStateProvider;
         await InvokeAsync(async () =>
         {
@@ -48,15 +47,12 @@
                         Role = role ?? "Khách hàng"
                     };
 
-                // Lưu session storage trước
                 var sessionJson = System.Text.Json.JsonSerializer.Serialize(userSession);
                 await JS.InvokeVoidAsync("sessionStorage.setItem", "currentUser", sessionJson);
 
-                // Thông báo auth state thay đổi
                 var customProvider = (CustomAuthStateProvider)AuthStateProvider;
                 customProvider.NotifyUserLoggedIn(userSession);
 
-                // Đợi auth state cập nhật xong
                 await Task.Delay(200);
 
                 string currentRole = (role ?? "").ToLower().Trim();

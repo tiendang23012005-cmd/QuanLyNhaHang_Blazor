@@ -20,7 +20,7 @@
             <div class="stat-icon">💰</div>
             <div>
                 <div class="stat-value">@TotalRevenue.ToString("N0") đ</div>
-                <div class="stat-title">Tổng doanh thu</div>
+                <div class="stat-title">Tổng doanh thu năm</div>
             </div>
         </div>
 
@@ -44,7 +44,7 @@
             <div class="stat-icon">🎯</div>
             <div>
                 <div class="stat-value">@Progress%</div>
-                <div class="stat-title">Tiến độ mục tiêu tháng</div>
+                <div class="stat-title">Tiến độ mục tiêu năm</div>
             </div>
         </div>
     </div>
@@ -52,8 +52,8 @@
     <div class="progress-card">
         <div class="progress-header">
             <span>
-                Mục tiêu tháng:
-                <strong>@MonthlyTarget.ToString("N0") đ</strong>
+                Mục tiêu năm:
+                <strong>@YearlyTarget.ToString("N0") đ</strong>
             </span>
 
             <span>
@@ -148,7 +148,7 @@
     private decimal TotalRevenue { get; set; } = 0;
     private int TotalBills { get; set; } = 0;
     private int TotalCustomers { get; set; } = 0;
-    private decimal MonthlyTarget { get; set; } = 100000000;
+    private decimal YearlyTarget { get; set; } = 500000000;
 
     private List<MonthlyRevenueItem> MonthlyRevenue { get; set; } = new();
     private List<RevenueDetailItem> RevenueDetails { get; set; } = new();
@@ -159,8 +159,8 @@
     {
         get
         {
-            if (MonthlyTarget == 0) return 0;
-            return (int)Math.Round((TotalRevenue / MonthlyTarget) * 100);
+            if (YearlyTarget == 0) return 0;
+            return (int)Math.Round((TotalRevenue / YearlyTarget) * 100);
         }
     }
 
@@ -191,7 +191,7 @@
                 TotalRevenue = response.TotalRevenue;
                 TotalBills = response.TotalBills;
                 TotalCustomers = response.TotalCustomers;
-                if (response.MonthlyTarget > 0) MonthlyTarget = response.MonthlyTarget;
+                if (response.YearlyTarget > 0) YearlyTarget = response.YearlyTarget;
 
                 if (response.MonthlyRevenue != null && response.MonthlyRevenue.Any())
                     MonthlyRevenue = response.MonthlyRevenue;

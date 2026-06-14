@@ -89,7 +89,6 @@
     private string errorMessage = string.Empty;
     private bool isLoading = false;
 
-    // Chỉ định rõ Namespace để tránh lỗi không tìm thấy AuthenticationStateProvider
     [Inject] private Microsoft.AspNetCore.Components.Authorization.AuthenticationStateProvider AuthStateProvider { get; set; } = default!;
 
     private async Task HandleSubmit()

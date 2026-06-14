@@ -189,20 +189,18 @@
 
     private decimal TotalPrice => cartItems.Sum(x => x.MonAn.Gia * x.SoLuong);
 
-    // ✅ ĐỔI THÀNH: khai báo rỗng
     private List<BanAnModel> danhSachBan = new();
 
     protected override async Task OnInitializedAsync()
     {
         await LoadMenuAsync();
-        await LoadDanhSachBanAsync(); // ✅ THÊM DÒNG NÀY
+        await LoadDanhSachBanAsync();
     }
 
     private async Task LoadDanhSachBanAsync()
     {
         try
         {
-            // ✅ Đúng route theo TableManagementController
             var data = await Http.GetFromJsonAsync<List<BanAnModel>>("api/TableManagement");
             if (data != null) danhSachBan = data;
         }
@@ -379,6 +377,6 @@
         public int MaBan { get; set; }
         public string SoBan { get; set; } = string.Empty;
         public int SucChua { get; set; }
-        public string? TrangThaiBan { get; set; }  // ✅ đúng tên field
+        public string? TrangThaiBan { get; set; }
     }
 }

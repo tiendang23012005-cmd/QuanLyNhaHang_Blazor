@@ -1051,6 +1051,21 @@ tbody tr[b-clnzp1gpwt] {
         overflow-x: auto;
     }
 }
+
+    .stats-grid[b-clnzp1gpwt] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-grid[b-clnzp1gpwt] {
+        grid-template-columns: 1fr;
+    }
+
+    .chart[b-clnzp1gpwt] {
+        overflow-x: auto;
+    }
+}
 /* /Pages/Admin/TableManagement.razor.rz.scp.css */
 .table-container[b-pepynoyui4] {
     background: white;
