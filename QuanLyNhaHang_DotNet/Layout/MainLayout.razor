@@ -3,7 +3,9 @@
 @implements IDisposable
 
 
-<Header />
+<div class="no-print">
+    <Header />
+</div>
 
 <main>
     @Body
@@ -24,9 +26,9 @@
     private void OnThayDoiDiaChiUrl(object? sender, LocationChangedEventArgs e)
     {
         KiemTraUrlDeAnHienHeader(e.Location);
-        
+
         // Ép Blazor RenderTree tính toán lại để ẩn/hiện Header lập tức trên UI
-        StateHasChanged(); 
+        StateHasChanged();
     }
 
     private void KiemTraUrlDeAnHienHeader(string url)
@@ -36,7 +38,7 @@
 
         // Nếu tuyến đường chứa /login hoặc /register thì trả về true
         bool laTrangXacThuc = urlChuThuong.Contains("/login") || urlChuThuong.Contains("/register");
-        
+
         // Ẩn Header nếu đang ở các trang Xác thực tài khoản
         hienThiHeaderToanCuc = !laTrangXacThuc;
     }

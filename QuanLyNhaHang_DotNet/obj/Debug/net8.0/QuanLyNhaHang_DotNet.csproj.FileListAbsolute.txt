@@ -2097,6 +2097,6 @@ D:\C_vscode_tim\QuanLyNhaHang_Blazor\QuanLyNhaHang_DotNet\obj\Debug\net8.0\webci
 D:\C_vscode_tim\QuanLyNhaHang_Blazor\QuanLyNhaHang_DotNet\obj\Debug\net8.0\webcil\Microsoft.Net.Http.Headers.wasm
 D:\C_vscode_tim\QuanLyNhaHang_Blazor\QuanLyNhaHang_DotNet\obj\Debug\net8.0\compressed\wa81788dqv-4z31k71hq7.gz
 D:\C_vscode_tim\QuanLyNhaHang_Blazor\QuanLyNhaHang_DotNet\obj\Debug\net8.0\compressed\riyv5s6kpg-7rvzllyyln.gz
-D:\C_vscode_tim\QuanLyNhaHang_Blazor\QuanLyNhaHang_DotNet\obj\Debug\net8.0\compressed\eawvad3olj-nu6oociruf.gz
-D:\C_vscode_tim\QuanLyNhaHang_Blazor\QuanLyNhaHang_DotNet\obj\Debug\net8.0\compressed\yd3jelv431-b85p53d176.gz
-D:\C_vscode_tim\QuanLyNhaHang_Blazor\QuanLyNhaHang_DotNet\obj\Debug\net8.0\compressed\afftlsz70b-rq9qscrq3z.gz
+D:\C_vscode_tim\QuanLyNhaHang_Blazor\QuanLyNhaHang_DotNet\obj\Debug\net8.0\compressed\eawvad3olj-lfzyuzv9dh.gz
+D:\C_vscode_tim\QuanLyNhaHang_Blazor\QuanLyNhaHang_DotNet\obj\Debug\net8.0\compressed\yd3jelv431-otsbfgmg92.gz
+D:\C_vscode_tim\QuanLyNhaHang_Blazor\QuanLyNhaHang_DotNet\obj\Debug\net8.0\compressed\afftlsz70b-sne54vvytl.gz

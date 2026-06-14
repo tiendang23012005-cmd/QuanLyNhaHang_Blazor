@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ntl6AnZ94yGB+rVqXR8nXAWD9iLRiDNkbmUlSamQlkg=",
+  "Hash": "rZAjfvzZhTcLavNjJlIIjTexZQckmuazCtpkcqUTQMc=",
   "Source": "QuanLyNhaHang_DotNet",
   "BasePath": "/",
   "Mode": "Root",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "manifest",
-      "Fingerprint": "rq9qscrq3z",
-      "Integrity": "0y+4v/BxFNY9POl0BeMlB9xJRaMdwbIsUVZgrvLULw8=",
+      "Fingerprint": "sne54vvytl",
+      "Integrity": "eKkM27tFBw8lh/NX4iPaVBQ9NkuwANabLbOHTGyAbKY=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net8.0\\blazor.boot.json"
@@ -955,8 +955,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "b85p53d176",
-      "Integrity": "RfhcY0Y0Q0fL80aECqpIYbzfrby9gZhvzUIve0EwA2E=",
+      "Fingerprint": "otsbfgmg92",
+      "Integrity": "rHVT+fH+8i54pdAdC9Qfp0coIGfAmabVom6rPOUAafo=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net8.0\\QuanLyNhaHang_DotNet.pdb"
@@ -976,8 +976,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "nu6oociruf",
-      "Integrity": "UR8+oflF3hKWKb0j0kny2KROVLULJtPIXWOGEPwhquE=",
+      "Fingerprint": "lfzyuzv9dh",
+      "Integrity": "H57dcxbXsdeqsxvn5MDvk1Ewfx8Hck4zhbU4YZjblKQ=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\webcil\\QuanLyNhaHang_DotNet.wasm"
@@ -5603,7 +5603,7 @@
       "OriginalItemSpec": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Net.NetworkInformation.wasm"
     },
     {
-      "Identity": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\afftlsz70b-rq9qscrq3z.gz",
+      "Identity": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\afftlsz70b-sne54vvytl.gz",
       "SourceId": "QuanLyNhaHang_DotNet",
       "SourceType": "Computed",
       "ContentRoot": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\",
@@ -5617,8 +5617,8 @@
       "RelatedAsset": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "r9oqdz1zt2",
-      "Integrity": "oZkUwvngh2+eRL4qn3JbzGXFKKQQUH2vgeSwTHIYokk=",
+      "Fingerprint": "3gctrfmaxa",
+      "Integrity": "Q1vrxGQdx0p6o+Ps83IfAF+FEPrbzSh5XcfY3tpuswU=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json"
@@ -6065,7 +6065,7 @@
       "OriginalItemSpec": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Reflection.TypeExtensions.wasm"
     },
     {
-      "Identity": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\eawvad3olj-nu6oociruf.gz",
+      "Identity": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\eawvad3olj-lfzyuzv9dh.gz",
       "SourceId": "QuanLyNhaHang_DotNet",
       "SourceType": "Computed",
       "ContentRoot": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\",
@@ -6079,8 +6079,8 @@
       "RelatedAsset": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\QuanLyNhaHang_DotNet.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "1tk28ivnwf",
-      "Integrity": "K+qK8Xga4LG97SGr/s9O8R8B+uI8JLwNpck2bNd0tQk=",
+      "Fingerprint": "chfn3m4feh",
+      "Integrity": "4FZ06cPGQTi1cb/gew105TEayZs5aC6tm7JM/8U9bwM=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\QuanLyNhaHang_DotNet.wasm"
@@ -8522,7 +8522,7 @@
       "OriginalItemSpec": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Xml.ReaderWriter.wasm"
     },
     {
-      "Identity": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\yd3jelv431-b85p53d176.gz",
+      "Identity": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\yd3jelv431-otsbfgmg92.gz",
       "SourceId": "QuanLyNhaHang_DotNet",
       "SourceType": "Computed",
       "ContentRoot": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\",
@@ -8536,8 +8536,8 @@
       "RelatedAsset": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\QuanLyNhaHang_DotNet.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "b7sbh05uu5",
-      "Integrity": "eRtbvrunT+TxpvnpzTxBP/EtfMnC956JckYty7zOCtc=",
+      "Fingerprint": "5zn0res7o0",
+      "Integrity": "YezqjPJAaPBAadJfix9zbKcDK9rtcN2R2xn4U5hz5Fw=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\QuanLyNhaHang_DotNet.pdb"
@@ -8809,8 +8809,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "swsybuv5hr",
-      "Integrity": "JOZWd9XYwDyrwjSB0PVTcc602GisYED21qQUCSMlGtI=",
+      "Fingerprint": "alg7uzaonl",
+      "Integrity": "vjlS+xU2C3NvoyHxAO6z3gdTVdDiM0eVZ5SY3qb5aVs=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\app.css"
@@ -8962,11 +8962,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"0y+4v/BxFNY9POl0BeMlB9xJRaMdwbIsUVZgrvLULw8=\""
+          "Value": "\"eKkM27tFBw8lh/NX4iPaVBQ9NkuwANabLbOHTGyAbKY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 14 Jun 2026 12:40:10 GMT"
+          "Value": "Sun, 14 Jun 2026 14:38:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8976,18 +8976,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-0y+4v/BxFNY9POl0BeMlB9xJRaMdwbIsUVZgrvLULw8="
+          "Value": "sha256-eKkM27tFBw8lh/NX4iPaVBQ9NkuwANabLbOHTGyAbKY="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json",
-      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\afftlsz70b-rq9qscrq3z.gz",
+      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\afftlsz70b-sne54vvytl.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000111383382"
+          "Quality": "0.000111358575"
         }
       ],
       "ResponseHeaders": [
@@ -8997,15 +8997,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8977"
+          "Value": "8979"
         },
         {
           "Name": "ETag",
-          "Value": "\"oZkUwvngh2+eRL4qn3JbzGXFKKQQUH2vgeSwTHIYokk=\""
+          "Value": "\"Q1vrxGQdx0p6o+Ps83IfAF+FEPrbzSh5XcfY3tpuswU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 14 Jun 2026 10:48:22 GMT"
+          "Value": "Sun, 14 Jun 2026 14:34:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9025,19 +9025,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"0y+4v/BxFNY9POl0BeMlB9xJRaMdwbIsUVZgrvLULw8=\""
+          "Value": "W/\"eKkM27tFBw8lh/NX4iPaVBQ9NkuwANabLbOHTGyAbKY=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-0y+4v/BxFNY9POl0BeMlB9xJRaMdwbIsUVZgrvLULw8="
+          "Value": "sha256-eKkM27tFBw8lh/NX4iPaVBQ9NkuwANabLbOHTGyAbKY="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.gz",
-      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\afftlsz70b-rq9qscrq3z.gz",
+      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\afftlsz70b-sne54vvytl.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9046,7 +9046,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8977"
+          "Value": "8979"
         },
         {
           "Name": "Content-Type",
@@ -9054,11 +9054,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"oZkUwvngh2+eRL4qn3JbzGXFKKQQUH2vgeSwTHIYokk=\""
+          "Value": "\"Q1vrxGQdx0p6o+Ps83IfAF+FEPrbzSh5XcfY3tpuswU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 14 Jun 2026 10:48:22 GMT"
+          "Value": "Sun, 14 Jun 2026 14:34:24 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9076,7 +9076,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-oZkUwvngh2+eRL4qn3JbzGXFKKQQUH2vgeSwTHIYokk="
+          "Value": "sha256-Q1vrxGQdx0p6o+Ps83IfAF+FEPrbzSh5XcfY3tpuswU="
         }
       ]
     },
@@ -14982,7 +14982,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "136032"
+          "Value": "140240"
         },
         {
           "Name": "Content-Type",
@@ -14990,11 +14990,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"RfhcY0Y0Q0fL80aECqpIYbzfrby9gZhvzUIve0EwA2E=\""
+          "Value": "\"rHVT+fH+8i54pdAdC9Qfp0coIGfAmabVom6rPOUAafo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 14 Jun 2026 12:40:09 GMT"
+          "Value": "Sun, 14 Jun 2026 14:34:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15004,18 +15004,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-RfhcY0Y0Q0fL80aECqpIYbzfrby9gZhvzUIve0EwA2E="
+          "Value": "sha256-rHVT+fH+8i54pdAdC9Qfp0coIGfAmabVom6rPOUAafo="
         }
       ]
     },
     {
       "Route": "_framework/QuanLyNhaHang_DotNet.pdb",
-      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\yd3jelv431-b85p53d176.gz",
+      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\yd3jelv431-otsbfgmg92.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000009559590"
+          "Quality": "0.000009494963"
         }
       ],
       "ResponseHeaders": [
@@ -15025,15 +15025,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "104606"
+          "Value": "105318"
         },
         {
           "Name": "ETag",
-          "Value": "\"eRtbvrunT+TxpvnpzTxBP/EtfMnC956JckYty7zOCtc=\""
+          "Value": "\"YezqjPJAaPBAadJfix9zbKcDK9rtcN2R2xn4U5hz5Fw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 14 Jun 2026 10:48:22 GMT"
+          "Value": "Sun, 14 Jun 2026 14:34:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15053,19 +15053,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"RfhcY0Y0Q0fL80aECqpIYbzfrby9gZhvzUIve0EwA2E=\""
+          "Value": "W/\"rHVT+fH+8i54pdAdC9Qfp0coIGfAmabVom6rPOUAafo=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-RfhcY0Y0Q0fL80aECqpIYbzfrby9gZhvzUIve0EwA2E="
+          "Value": "sha256-rHVT+fH+8i54pdAdC9Qfp0coIGfAmabVom6rPOUAafo="
         }
       ]
     },
     {
       "Route": "_framework/QuanLyNhaHang_DotNet.pdb.gz",
-      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\yd3jelv431-b85p53d176.gz",
+      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\yd3jelv431-otsbfgmg92.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -15074,7 +15074,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "104606"
+          "Value": "105318"
         },
         {
           "Name": "Content-Type",
@@ -15082,11 +15082,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"eRtbvrunT+TxpvnpzTxBP/EtfMnC956JckYty7zOCtc=\""
+          "Value": "\"YezqjPJAaPBAadJfix9zbKcDK9rtcN2R2xn4U5hz5Fw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 14 Jun 2026 10:48:22 GMT"
+          "Value": "Sun, 14 Jun 2026 14:34:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15104,7 +15104,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-eRtbvrunT+TxpvnpzTxBP/EtfMnC956JckYty7zOCtc="
+          "Value": "sha256-YezqjPJAaPBAadJfix9zbKcDK9rtcN2R2xn4U5hz5Fw="
         }
       ]
     },
@@ -15119,7 +15119,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "249621"
+          "Value": "259349"
         },
         {
           "Name": "Content-Type",
@@ -15127,11 +15127,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"UR8+oflF3hKWKb0j0kny2KROVLULJtPIXWOGEPwhquE=\""
+          "Value": "\"H57dcxbXsdeqsxvn5MDvk1Ewfx8Hck4zhbU4YZjblKQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 14 Jun 2026 12:40:09 GMT"
+          "Value": "Sun, 14 Jun 2026 14:34:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15141,18 +15141,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-UR8+oflF3hKWKb0j0kny2KROVLULJtPIXWOGEPwhquE="
+          "Value": "sha256-H57dcxbXsdeqsxvn5MDvk1Ewfx8Hck4zhbU4YZjblKQ="
         }
       ]
     },
     {
       "Route": "_framework/QuanLyNhaHang_DotNet.wasm",
-      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\eawvad3olj-nu6oociruf.gz",
+      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\eawvad3olj-lfzyuzv9dh.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000012255953"
+          "Quality": "0.000012126357"
         }
       ],
       "ResponseHeaders": [
@@ -15162,15 +15162,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "81592"
+          "Value": "82464"
         },
         {
           "Name": "ETag",
-          "Value": "\"K+qK8Xga4LG97SGr/s9O8R8B+uI8JLwNpck2bNd0tQk=\""
+          "Value": "\"4FZ06cPGQTi1cb/gew105TEayZs5aC6tm7JM/8U9bwM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 14 Jun 2026 10:23:28 GMT"
+          "Value": "Sun, 14 Jun 2026 14:34:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15190,19 +15190,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"UR8+oflF3hKWKb0j0kny2KROVLULJtPIXWOGEPwhquE=\""
+          "Value": "W/\"H57dcxbXsdeqsxvn5MDvk1Ewfx8Hck4zhbU4YZjblKQ=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-UR8+oflF3hKWKb0j0kny2KROVLULJtPIXWOGEPwhquE="
+          "Value": "sha256-H57dcxbXsdeqsxvn5MDvk1Ewfx8Hck4zhbU4YZjblKQ="
         }
       ]
     },
     {
       "Route": "_framework/QuanLyNhaHang_DotNet.wasm.gz",
-      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\eawvad3olj-nu6oociruf.gz",
+      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\eawvad3olj-lfzyuzv9dh.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -15211,7 +15211,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "81592"
+          "Value": "82464"
         },
         {
           "Name": "Content-Type",
@@ -15219,11 +15219,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"K+qK8Xga4LG97SGr/s9O8R8B+uI8JLwNpck2bNd0tQk=\""
+          "Value": "\"4FZ06cPGQTi1cb/gew105TEayZs5aC6tm7JM/8U9bwM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 14 Jun 2026 10:23:28 GMT"
+          "Value": "Sun, 14 Jun 2026 14:34:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -15241,7 +15241,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-K+qK8Xga4LG97SGr/s9O8R8B+uI8JLwNpck2bNd0tQk="
+          "Value": "sha256-4FZ06cPGQTi1cb/gew105TEayZs5aC6tm7JM/8U9bwM="
         }
       ]
     },
@@ -37440,6 +37440,51 @@
       ]
     },
     {
+      "Route": "css/app.alg7uzaonl.css",
+      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\wwwroot\\css\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5298"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vjlS+xU2C3NvoyHxAO6z3gdTVdDiM0eVZ5SY3qb5aVs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 14 Jun 2026 14:38:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "alg7uzaonl"
+        },
+        {
+          "Name": "label",
+          "Value": "css/app.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vjlS+xU2C3NvoyHxAO6z3gdTVdDiM0eVZ5SY3qb5aVs="
+        }
+      ]
+    },
+    {
       "Route": "css/app.css",
       "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\wwwroot\\css\\app.css",
       "Selectors": [],
@@ -37450,7 +37495,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3782"
+          "Value": "5298"
         },
         {
           "Name": "Content-Type",
@@ -37458,11 +37503,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"JOZWd9XYwDyrwjSB0PVTcc602GisYED21qQUCSMlGtI=\""
+          "Value": "\"vjlS+xU2C3NvoyHxAO6z3gdTVdDiM0eVZ5SY3qb5aVs=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 07 Jun 2026 09:39:13 GMT"
+          "Value": "Sun, 14 Jun 2026 14:38:46 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -37472,52 +37517,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-JOZWd9XYwDyrwjSB0PVTcc602GisYED21qQUCSMlGtI="
-        }
-      ]
-    },
-    {
-      "Route": "css/app.swsybuv5hr.css",
-      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\wwwroot\\css\\app.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3782"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JOZWd9XYwDyrwjSB0PVTcc602GisYED21qQUCSMlGtI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 07 Jun 2026 09:39:13 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "swsybuv5hr"
-        },
-        {
-          "Name": "label",
-          "Value": "css/app.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-JOZWd9XYwDyrwjSB0PVTcc602GisYED21qQUCSMlGtI="
+          "Value": "sha256-vjlS+xU2C3NvoyHxAO6z3gdTVdDiM0eVZ5SY3qb5aVs="
         }
       ]
     },

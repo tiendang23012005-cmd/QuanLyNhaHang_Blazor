@@ -116,9 +116,15 @@
                                 <label class="form-label text-muted small fw-bold">Chọn bàn ăn (*):</label>
                                 <select class="form-select form-select-sm" @bind="selectedTable">
                                     <option value="" disabled selected>-- Vui lòng chọn bàn --</option>
-                                    @foreach (var ban in danhSachBan)
+                                    @foreach (var ban in danhSachBan.Where(b => b.TrangThaiBan == "Trống"))
                                     {
-                                        <option value="@ban.MaBan">@ban.SoBan</option>
+                                        <option value="@ban.MaBan">@ban.SoBan (sức chứa: @ban.SucChua người)</option>
+                                    }
+                                    @foreach (var ban in danhSachBan.Where(b => b.TrangThaiBan != "Trống"))
+                                    {
+                                        <option value="@ban.MaBan" disabled style="color:gray">
+                                            @ban.SoBan — Đang có khách
+                                        </option>
                                     }
                                 </select>
                             </div>
@@ -183,17 +189,27 @@
 
     private decimal TotalPrice => cartItems.Sum(x => x.MonAn.Gia * x.SoLuong);
 
-    private List<BanAnModel> danhSachBan = new()
-    {
-        new BanAnModel { MaBan = 1, SoBan = "Bàn số 1" },
-        new BanAnModel { MaBan = 2, SoBan = "Bàn số 2" },
-        new BanAnModel { MaBan = 3, SoBan = "Bàn số 5" },
-        new BanAnModel { MaBan = 4, SoBan = "Bàn số 6" }
-    };
+    // ✅ ĐỔI THÀNH: khai báo rỗng
+    private List<BanAnModel> danhSachBan = new();
 
     protected override async Task OnInitializedAsync()
     {
         await LoadMenuAsync();
+        await LoadDanhSachBanAsync(); // ✅ THÊM DÒNG NÀY
+    }
+
+    private async Task LoadDanhSachBanAsync()
+    {
+        try
+        {
+            // ✅ Đúng route theo TableManagementController
+            var data = await Http.GetFromJsonAsync<List<BanAnModel>>("api/TableManagement");
+            if (data != null) danhSachBan = data;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Lỗi tải danh sách bàn: " + ex.Message);
+        }
     }
 
     private async Task LoadMenuAsync()
@@ -362,5 +378,7 @@
     {
         public int MaBan { get; set; }
         public string SoBan { get; set; } = string.Empty;
+        public int SucChua { get; set; }
+        public string? TrangThaiBan { get; set; }  // ✅ đúng tên field
     }
 }

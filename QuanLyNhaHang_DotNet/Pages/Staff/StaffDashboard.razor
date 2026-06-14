@@ -251,7 +251,13 @@ else
 
                 <div class="dashed-line"></div>
 
-                <table class="invoice-table">
+                <table class="invoice-table" style="width:100%; table-layout:fixed;">
+                    <colgroup>
+                        <col style="width:42%" />
+                        <col style="width:10%" />
+                        <col style="width:24%" />
+                        <col style="width:24%" />
+                    </colgroup>
                     <thead>
                         <tr>
                             <th align="left">Món ăn</th>
@@ -266,7 +272,10 @@ else
                             @foreach (var item in donHangHienTai.ChiTietDonHangs)
                             {
                                 <tr>
-                                    <td align="left" class="food-name">@item.TenMonAn</td>
+                                    <td align="left" class="food-name"
+                                        style="word-wrap:break-word; word-break:break-word; white-space:normal;">
+                                        @item.TenMonAn
+                                    </td>
                                     <td align="center">@item.SoLuong</td>
                                     <td align="right">@item.GiaLucDat.ToString("N0")</td>
                                     <td align="right" class="font-bold">@item.ThanhTien.ToString("N0")</td>
@@ -376,28 +385,24 @@ else
     {
         try
         {
-            var jsonString = await Http.GetStringAsync("https://localhost:7043/api/MonAn");
-
-            if (!string.IsNullOrEmpty(jsonString))
+            // ✅ Thử parse trực tiếp array trước
+            var result = await Http.GetFromJsonAsync<List<MonAn>>("api/MonAn");
+            if (result != null && result.Any())
             {
-                var options = new JsonSerializerOptions
-                    {
-                        PropertyNameCaseInsensitive = true
-                    };
+                danhSachMonAn = result;
+                await InvokeAsync(StateHasChanged);
+                return;
+            }
+        }
+        catch { }
 
-                using (var doc = JsonDocument.Parse(jsonString))
-                {
-                    var root = doc.RootElement;
-                    if (root.ValueKind == JsonValueKind.Object &&
-                       (root.TryGetProperty("data", out var dataProp) || root.TryGetProperty("Data", out dataProp)))
-                    {
-                        danhSachMonAn = JsonSerializer.Deserialize<List<MonAn>>(dataProp.GetRawText(), options) ?? new();
-                    }
-                    else
-                    {
-                        danhSachMonAn = JsonSerializer.Deserialize<List<MonAn>>(jsonString, options) ?? new();
-                    }
-                }
+        try
+        {
+            // ✅ Nếu API bọc trong wrapper { data: [...] } thì parse kiểu này
+            var wrapper = await Http.GetFromJsonAsync<ApiWrapper<List<MonAn>>>("api/MonAn");
+            if (wrapper?.Data != null)
+            {
+                danhSachMonAn = wrapper.Data;
             }
         }
         catch (Exception ex)
@@ -408,6 +413,13 @@ else
         {
             await InvokeAsync(StateHasChanged);
         }
+    }
+
+    // ✅ THÊM class wrapper
+    public class ApiWrapper<T>
+    {
+        public T? Data { get; set; }
+        public bool IsSuccess { get; set; }
     }
 
     private async Task ChonBan(BanAnDto ban)

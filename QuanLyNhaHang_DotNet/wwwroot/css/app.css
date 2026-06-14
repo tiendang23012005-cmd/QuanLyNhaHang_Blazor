@@ -1,4 +1,4 @@
-html, body {
+﻿html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -100,4 +100,59 @@ a, .btn-link {
 
 code {
     color: #c02d76;
+}
+
+/* =============================================
+   PRINT — Ẩn mọi thứ, chỉ hiện hóa đơn
+   ============================================= */
+@media print {
+    /* Ẩn header, navbar, sidebar */
+    header, nav, .header, .navbar,
+    .no-print, .modal-footer-tools,
+    .dashboard-container, .tables-section,
+    .orders-section, .btn-in, .btn-thanhtoan,
+    .btn-huy, .btn-them-mon, .bill-actions {
+        display: none !important;
+    }
+
+    /* Ẩn tất cả modal overlay ngoại trừ modal in */
+    .modal-overlay:not(.invoice-print-modal) {
+        display: none !important;
+    }
+
+    /* Modal in chiếm toàn trang */
+    .invoice-print-modal {
+        position: static !important;
+        background: none !important;
+        padding: 0 !important;
+    }
+
+    .modal-content-invoice {
+        box-shadow: none !important;
+        border: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Hóa đơn chiếm toàn trang in */
+    .invoice-pos-paper {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Reset nền trắng */
+    body, html {
+        background: white !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Ẩn main layout wrapper */
+    main {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
 }
