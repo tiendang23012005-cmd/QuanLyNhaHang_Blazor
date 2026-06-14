@@ -19,6 +19,8 @@ namespace RestaurantManagement.Frontend.Models
         public string DienThoai { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "Vui lòng chọn vai trò.")]
-        public int MaVaiTro { get; set; } = 2; // Mặc định: Phục vụ
+        public int MaVaiTro { get; set; }
+
+        public bool TrangThaiHoatDong { get; set; }
     }
 }

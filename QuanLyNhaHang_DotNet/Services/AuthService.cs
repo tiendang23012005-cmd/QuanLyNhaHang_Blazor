@@ -56,4 +56,19 @@ public class AuthService
         await _jsRuntime.InvokeVoidAsync("sessionStorage.removeItem", "currentUser");
         ((CustomAuthStateProvider)_authStateProvider).NotifyUserLogout();
     }
+
+    // ✅ THÊM VÀO CUỐI CLASS AuthService (Blazor)
+
+    public async Task<AuthResponse?> ForgotPasswordAsync(string email)
+    {
+        var response = await _http.PostAsJsonAsync("api/auth/forgot-password",
+            new { Email = email });
+        return await response.Content.ReadFromJsonAsync<AuthResponse>();
+    }
+
+    public async Task<AuthResponse?> ResetPasswordAsync(ResetPasswordRequest request)
+    {
+        var response = await _http.PostAsJsonAsync("api/auth/reset-password", request);
+        return await response.Content.ReadFromJsonAsync<AuthResponse>();
+    }
 }

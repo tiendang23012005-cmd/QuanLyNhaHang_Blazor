@@ -11,6 +11,7 @@ namespace RestaurantManagement.Frontend.Models
         public decimal Gia { get; set; }
         public string HinhAnh { get; set; } = string.Empty;
         public bool TrangThai { get; set; }
+        public string MoTa { get; set; } = string.Empty;
     }
 
     // Model dùng để map trực tiếp dữ liệu thô nhận về từ API GET /api/FoodManagement

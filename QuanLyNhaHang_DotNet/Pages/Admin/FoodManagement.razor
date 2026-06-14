@@ -47,9 +47,24 @@
             @foreach (var food in FilteredFoods)
             {
                 <div class="food-card">
-                    <div class="food-image">@food.HinhAnh</div>
+                    <div class="food-image">
+                        @if (IsImageUrl(food.HinhAnh))
+                        {
+                            <img src="@food.HinhAnh" alt="@food.TenMon" />
+                        }
+                        else
+                        {
+                            @food.HinhAnh
+                        }
+                    </div>
                     <h3>@food.TenMon</h3>
                     <p>@food.LoaiMon</p>
+                    @if (!string.IsNullOrWhiteSpace(food.MoTa))
+                    {
+                        <p class="food-description">
+                            @food.MoTa
+                        </p>
+                    }
                     <div class="price">@food.Gia.ToString("N0") đ</div>
 
                     <span class="status @(food.TrangThai ? "active" : "inactive")">
@@ -104,8 +119,53 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Hình ảnh (emoji)</label>
-                    <InputText placeholder="Ví dụ: 🍜" @bind-Value="foodForm.HinhAnh" />
+                    <label>Hình ảnh món ăn</label>
+
+                    <div class="image-upload-box">
+                        @if (!string.IsNullOrWhiteSpace(foodForm.HinhAnh) && IsImageUrl(foodForm.HinhAnh))
+                        {
+                            <div class="image-preview-container">
+
+                                <div class="image-preview">
+                                    <img src="@foodForm.HinhAnh"
+                                         alt="Ảnh món ăn" />
+                                </div>
+
+                                <button type="button"
+                                        class="remove-image-btn"
+                                        @onclick="RemoveImage">
+
+                                    ✕
+
+                                </button>
+
+                            </div>
+                        }
+                        else if (!string.IsNullOrWhiteSpace(foodForm.HinhAnh))
+                        {
+                            <div class="image-preview emoji-preview">
+                                @foodForm.HinhAnh
+                            </div>
+                        }
+
+                        <InputFile OnChange="OnImageSelected" accept=".jpg,.jpeg,.png,.gif,.webp" disabled="@isUploadingImage" />
+
+                        @if (isUploadingImage)
+                        {
+                            <p class="upload-hint">⏳ Đang tải ảnh lên cloud...</p>
+                        }
+                        else
+                        {
+                            <p class="upload-hint">Chọn ảnh (JPG, PNG, GIF, WEBP - tối đa 5MB) để tải lên Cloudinary, hoặc nhập emoji bên dưới.</p>
+                        }
+
+                        @if (!string.IsNullOrWhiteSpace(uploadErrorMessage))
+                        {
+                            <p class="text-danger">@uploadErrorMessage</p>
+                        }
+                    </div>
+
+                    <InputText placeholder="Ví dụ: 🍜 hoặc dán URL ảnh" @bind-Value="foodForm.HinhAnh" />
                     <ValidationMessage For="() => foodForm.HinhAnh" class="text-danger" />
                 </div>
 
@@ -143,7 +203,10 @@
     private bool isCreateMode = false;
     private bool isEditMode = false;
     private bool isLoading = false;
+    private bool isUploadingImage = false;
+    private string? uploadErrorMessage;
     private const string ApiUrl = "https://localhost:7043/api/FoodManagement";
+    private const long MaxImageSize = 5 * 1024 * 1024; // 5MB
 
     // Tính toán bộ lọc giống get FilteredFoods() bên Angular
     private IEnumerable<FoodViewModel> FilteredFoods => foods
@@ -169,6 +232,7 @@
                         TenMon = x.TenMonAn,
                         LoaiMon = x.DanhMuc,
                         Gia = x.Gia,
+                        MoTa = x.MoTa ?? "",
                         HinhAnh = !string.IsNullOrEmpty(x.HinhAnh) ? x.HinhAnh : x.DanhMuc switch
                         {
                             "Món chính" => "🍛",
@@ -191,6 +255,7 @@
     private void OpenCreateForm()
     {
         foodForm = new FoodFormModel(); // Reset form
+        uploadErrorMessage = null;
         isCreateMode = true;
         isEditMode = false;
     }
@@ -199,6 +264,7 @@
     {
         currentFoodId = foodId;
         isLoading = true;
+        uploadErrorMessage = null;
         try
         {
             // Do API trả về mảng tất cả các món ăn, ta áp dụng logic tìm phần tử như code Angular gốc
@@ -235,10 +301,81 @@
         }
     }
 
+    // Kiểm tra chuỗi HinhAnh có phải là URL ảnh (Cloudinary/HTTP) hay là emoji
+    private static bool IsImageUrl(string value)
+    {
+        return !string.IsNullOrWhiteSpace(value)
+            && (value.StartsWith("http://") || value.StartsWith("https://"));
+    }
+
+    // Xử lý khi người dùng chọn ảnh từ máy -> upload lên Cloudinary qua API
+    private async Task OnImageSelected(InputFileChangeEventArgs e)
+    {
+        var file = e.File;
+        if (file == null) return;
+
+        uploadErrorMessage = null;
+
+        if (file.Size > MaxImageSize)
+        {
+            uploadErrorMessage = "Ảnh vượt quá kích thước cho phép (5MB).";
+            return;
+        }
+
+        isUploadingImage = true;
+        try
+        {
+            using var content = new MultipartFormDataContent();
+            using var fileStream = file.OpenReadStream(MaxImageSize);
+            using var streamContent = new StreamContent(fileStream);
+            streamContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(
+                string.IsNullOrWhiteSpace(file.ContentType) ? "application/octet-stream" : file.ContentType);
+
+            content.Add(streamContent, "file", file.Name);
+
+            var response = await Http.PostAsync($"{ApiUrl}/upload-image", content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var result = await response.Content.ReadFromJsonAsync<UploadImageResponse>();
+                if (result != null && !string.IsNullOrWhiteSpace(result.Url))
+                {
+                    foodForm.HinhAnh = result.Url;
+                }
+            }
+            else
+            {
+                var error = await response.Content.ReadFromJsonAsync<UploadErrorResponse>();
+                uploadErrorMessage = error?.Message ?? "Tải ảnh lên thất bại. Vui lòng thử lại.";
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            uploadErrorMessage = "Lỗi khi tải ảnh lên cloud. Vui lòng kiểm tra kết nối và thử lại.";
+        }
+        finally
+        {
+            isUploadingImage = false;
+        }
+    }
+
+    private class UploadImageResponse
+    {
+        public string? Url { get; set; }
+        public string? PublicId { get; set; }
+    }
+
+    private class UploadErrorResponse
+    {
+        public string? Message { get; set; }
+    }
+
     private void CloseForm()
     {
         isCreateMode = false;
         isEditMode = false;
+        uploadErrorMessage = null;
     }
 
     private async Task HandleValidSubmit()
@@ -309,5 +446,12 @@
             Console.WriteLine(ex.Message);
             await JS.InvokeVoidAsync("alert", "Lỗi thao tác xóa");
         }
+    }
+
+    private void RemoveImage()
+    {
+        foodForm.HinhAnh = "";
+
+        uploadErrorMessage = null;
     }
 }
