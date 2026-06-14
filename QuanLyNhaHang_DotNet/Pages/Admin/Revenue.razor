@@ -51,9 +51,17 @@
 
     <div class="progress-card">
         <div class="progress-header">
-            <span>Mục tiêu tháng</span>
-            <span>@Progress%</span>
+            <span>
+                Mục tiêu tháng:
+                <strong>@MonthlyTarget.ToString("N0") đ</strong>
+            </span>
+
+            <span>
+                Đã đạt:
+                <strong>@TotalRevenue.ToString("N0") đ (@Progress%)</strong>
+            </span>
         </div>
+
         <div class="progress-bar">
             <div class="progress-fill" style="width: @(Progress)%"></div>
         </div>
@@ -64,13 +72,50 @@
         <div class="chart">
             @foreach (var item in MonthlyRevenue)
             {
-                <div class="chart-item">
-                    <div class="bar" style="height: @GetBarHeight(item.Revenue)"></div>
+                <div class="chart-item"
+                     @onclick="() => ShowMonthDetail(item.Month)"
+                     style="cursor:pointer">
+
+                    <div class="bar"
+                         style="height: @GetBarHeight(item.Revenue)">
+                    </div>
+
                     <span>@item.Month</span>
                 </div>
             }
         </div>
     </div>
+
+    @if (SelectedMonth != null)
+    {
+        <div class="table-card">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+                <h3>@SelectedMonth.Month</h3>
+
+                <button class="cancel-btn"
+                        @onclick="() => SelectedMonth = null">
+                    Đóng
+                </button>
+            </div>
+
+            <p>
+                💰 Doanh thu:
+                <strong>
+                    @SelectedMonth.Revenue.ToString("N0") đ
+                </strong>
+            </p>
+
+            <p>
+                🧾 Hóa đơn:
+                <strong>@SelectedMonth.Bills</strong>
+            </p>
+
+            <p>
+                👥 Khách phục vụ:
+                <strong>@SelectedMonth.Customers</strong>
+            </p>
+        </div>
+    }
 
     <div class="table-card">
         <h3>Báo cáo chi tiết</h3>
@@ -107,6 +152,7 @@
 
     private List<MonthlyRevenueItem> MonthlyRevenue { get; set; } = new();
     private List<RevenueDetailItem> RevenueDetails { get; set; } = new();
+    private RevenueDetailItem? SelectedMonth;
 
     // Thuộc tính tính toán xử lý tiến độ (Tương đương get Progress() bên Angular)
     private int Progress
@@ -171,5 +217,12 @@
         double finalHeight = Math.Max((double)heightPercentage, 5.0);
 
         return $"{finalHeight}px";
+    }
+
+    private void ShowMonthDetail(string month)
+    {
+        SelectedMonth = RevenueDetails
+            .FirstOrDefault(x =>
+                x.Month == $"Tháng {month.Replace("T", "")}");
     }
 }

@@ -363,7 +363,7 @@ else
                     Console.WriteLine($"Lỗi đồng bộ định kỳ: {ex.Message}");
                 }
             });
-        }, null, 15000, 15000);
+        }, null, 5000, 5000);
     }
 
     private async Task LoadDanhSachBan()

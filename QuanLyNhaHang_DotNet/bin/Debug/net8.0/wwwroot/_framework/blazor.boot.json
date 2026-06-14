@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "QuanLyNhaHang_DotNet",
   "resources": {
-    "hash": "sha256-X4w4LYbqFbRYuu+oeZqJQmaNYtPA0cb2ezW1RIsxt+A=",
+    "hash": "sha256-OlTv0vqEadIHq1SCPxmb7wcE0j5WN9j9qk8kQI3rDNQ=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-xNQsYHtL1vcbrVTHDZAwJM4WovpoyjsrM2C6FQ8cW1w="
     },
@@ -212,10 +212,10 @@
       "mscorlib.wasm": "sha256-RAf5jgXLg+06C4tJ3CabxAZaVjCN2/+E6fxRjRN8yHk=",
       "netstandard.wasm": "sha256-KCAE8RQwTurP5pGnGF819qf9sK++2O0rXzt6tOjlfi8=",
       "System.Private.CoreLib.wasm": "sha256-LQqLbHgeEX4HONx7GwIxGgmzIXP6n2OPxqnq+/4Tyqk=",
-      "QuanLyNhaHang_DotNet.wasm": "sha256-H57dcxbXsdeqsxvn5MDvk1Ewfx8Hck4zhbU4YZjblKQ="
+      "QuanLyNhaHang_DotNet.wasm": "sha256-duU0t8Sgvt8SOYLeWYVZKIhY8Kk+Qd3S8/FmSE714yE="
     },
     "pdb": {
-      "QuanLyNhaHang_DotNet.pdb": "sha256-rHVT+fH+8i54pdAdC9Qfp0coIGfAmabVom6rPOUAafo="
+      "QuanLyNhaHang_DotNet.pdb": "sha256-L+hwy1vHUIAeTLabWi23i93A+h23DeFe4r79psUBtws="
     }
   },
   "cacheBootResources": true,
