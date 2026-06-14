@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "QuanLyNhaHang_DotNet",
   "resources": {
-    "hash": "sha256-TbzeYvLmGlz+k2FCN8WKCpJE88tySjGG9gpW88vwWNQ=",
+    "hash": "sha256-V29jeJQqCwmrgbI0fHMPM1kyS84t5qlzazFTYYsFUoU=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-xNQsYHtL1vcbrVTHDZAwJM4WovpoyjsrM2C6FQ8cW1w="
     },
@@ -25,6 +25,7 @@
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-e4hqkIPdVVdFFXvJs2Z6QafKhk12fDzlKQKxa83DtLo=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-iYwWRHCaYqK1f3lFW+fg6B8/gZmo+j33ZABi/MGP+kw=",
       "Microsoft.AspNetCore.Metadata.wasm": "sha256-zMam9mVqxQEy1t0AO7885plNzJJMIj7WTLYpglj2Hrg=",
+      "Microsoft.AspNetCore.WebUtilities.wasm": "sha256-YCpj1LNQpMxfSKDSryT0Eyy1Pwf6AvZTW/6KRcrb+Ns=",
       "Microsoft.Extensions.Configuration.wasm": "sha256-UDGEQR7J3WTfzYMgOzxVIBwFQtKEeJvO8UgrWagypdE=",
       "Microsoft.Extensions.Configuration.Abstractions.wasm": "sha256-yNdqbqDWGiJo943D7LPak5xryCBEsNH0wtdiuU1R9VE=",
       "Microsoft.Extensions.Configuration.Binder.wasm": "sha256-fNNlyyW44y8Gp6dvOtsvHoVNzpT8lrKmPleg5CDhRAo=",
@@ -41,6 +42,7 @@
       "Microsoft.Extensions.Primitives.wasm": "sha256-pVrYOTfjb2ITls3LKIByW1t8jwOAWFhmkIVDewtJ1GE=",
       "Microsoft.JSInterop.wasm": "sha256-cVjO85Az0jo43ik04zeWlVCX/lQnwh64NvqbNMQM8ac=",
       "Microsoft.JSInterop.WebAssembly.wasm": "sha256-EKx0fIGNubDqUVMsgtTABwJJ807Qngtp7FE2LW0IJow=",
+      "Microsoft.Net.Http.Headers.wasm": "sha256-fSuHnrMTJeC1iF0NPMQqmTs/PfWeybXQ76ddgEDTxFk=",
       "System.IO.Pipelines.wasm": "sha256-JqVBy6SV+3qk+IK3VJiyIDt9CsVk6b1/ytTXmrI4mTM=",
       "Microsoft.CSharp.wasm": "sha256-7Bfs33c7OZrbgWcIBluYbzsZ1u0obprWgsewXOKrWcA=",
       "Microsoft.VisualBasic.Core.wasm": "sha256-zIf1NRVYv6ya13edv24tLDcAqgwzEddFDsUyvQ4zLtY=",
@@ -210,10 +212,10 @@
       "mscorlib.wasm": "sha256-RAf5jgXLg+06C4tJ3CabxAZaVjCN2/+E6fxRjRN8yHk=",
       "netstandard.wasm": "sha256-KCAE8RQwTurP5pGnGF819qf9sK++2O0rXzt6tOjlfi8=",
       "System.Private.CoreLib.wasm": "sha256-LQqLbHgeEX4HONx7GwIxGgmzIXP6n2OPxqnq+/4Tyqk=",
-      "QuanLyNhaHang_DotNet.wasm": "sha256-HCV29Dja5g2A8hyd1q3o/IBMrqbRyaZRwSS2GMgaras="
+      "QuanLyNhaHang_DotNet.wasm": "sha256-SlNmxN52sLD5Pfs1UJ5toqDTWXx7DycdvxoTnx14cgQ="
     },
     "pdb": {
-      "QuanLyNhaHang_DotNet.pdb": "sha256-aGNVLANcXNCHLT/DODc0BB97eHUwf3SAmEpWX214tMw="
+      "QuanLyNhaHang_DotNet.pdb": "sha256-HM6COF56zZbczWhTxrizxZraisfrU8nb8WbdJU9Owyo="
     }
   },
   "cacheBootResources": true,

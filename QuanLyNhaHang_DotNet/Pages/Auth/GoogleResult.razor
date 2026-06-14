@@ -1,0 +1,75 @@
+﻿@page "/auth/google-result"
+@using QuanLyNhaHang_DotNet.Models
+@using QuanLyNhaHang_DotNet.Infrastructure
+@using Microsoft.AspNetCore.Components.Authorization
+@inject NavigationManager Router
+@inject IJSRuntime JS
+@inject AuthenticationStateProvider AuthStateProvider
+
+<div class="container-fluid min-vh-100 d-flex align-items-center justify-content-center bg-light">
+    <div class="text-center">
+        <div class="spinner-border text-warning mb-3" role="status"></div>
+        <p class="text-muted">Đang xử lý đăng nhập Google...</p>
+    </div>
+</div>
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        // Bây giờ dòng ép kiểu này sẽ sáng đèn và hoạt động hoàn hảo
+        var customProvider = (CustomAuthStateProvider)AuthStateProvider;
+        await InvokeAsync(async () =>
+        {
+            try
+            {
+                var uri = Router.Uri;
+                var queryStart = uri.IndexOf('?');
+                if (queryStart < 0) { Router.NavigateTo("/login"); return; }
+
+                var queryDict = uri.Substring(queryStart + 1)
+                    .Split('&')
+                    .Select(p => p.Split('=', 2))
+                    .Where(p => p.Length == 2)
+                    .ToDictionary(
+                        p => Uri.UnescapeDataString(p[0]),
+                        p => Uri.UnescapeDataString(p[1])
+                    );
+
+                queryDict.TryGetValue("token", out var token);
+                queryDict.TryGetValue("name", out var name);
+                queryDict.TryGetValue("role", out var role);
+
+                if (string.IsNullOrEmpty(token)) { Router.NavigateTo("/login"); return; }
+
+                var userSession = new UserSession
+                    {
+                        Token = token,
+                        FullName = name ?? "Người dùng Google",
+                        Role = role ?? "Khách hàng"
+                    };
+
+                // Lưu session storage trước
+                var sessionJson = System.Text.Json.JsonSerializer.Serialize(userSession);
+                await JS.InvokeVoidAsync("sessionStorage.setItem", "currentUser", sessionJson);
+
+                // Thông báo auth state thay đổi
+                var customProvider = (CustomAuthStateProvider)AuthStateProvider;
+                customProvider.NotifyUserLoggedIn(userSession);
+
+                // Đợi auth state cập nhật xong
+                await Task.Delay(200);
+
+                string currentRole = (role ?? "").ToLower().Trim();
+                if (currentRole is "admin" or "quản lý")
+                    Router.NavigateTo("/admin/user-management", forceLoad: true);
+                else
+                    Router.NavigateTo("/menu", forceLoad: true);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Lỗi GoogleResult: {ex.Message}");
+                Router.NavigateTo("/login");
+            }
+        });
+    }
+}

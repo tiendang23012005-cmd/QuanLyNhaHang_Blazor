@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YG7dRxZ9qiaKT481MUtllnrrgQv7/ztmxOE7JPL8B84=",
+  "Hash": "VhM/rN5Z+lXMm5vx3lG56WZ0zXlPTLcuRyvvQtOwxps=",
   "Source": "QuanLyNhaHang_DotNet",
   "BasePath": "/",
   "Mode": "Root",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "manifest",
-      "Fingerprint": "d6t07ihav7",
-      "Integrity": "tRJ9l7yzXAkwEWDUBxemGwF+NvwxKB0MRlcWEKDRm9g=",
+      "Fingerprint": "2f9m4w07i4",
+      "Integrity": "Lp0AUTUGxetJ9hEbFF1ILqVdg+fdiEv9GzUWUR0Vxn0=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net8.0\\blazor.boot.json"
@@ -416,6 +416,27 @@
       "OriginalItemSpec": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\webcil\\Microsoft.AspNetCore.Metadata.wasm"
     },
     {
+      "Identity": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.wasm",
+      "SourceId": "QuanLyNhaHang_DotNet",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.WebUtilities.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "Fingerprint": "4z31k71hq7",
+      "Integrity": "YCpj1LNQpMxfSKDSryT0Eyy1Pwf6AvZTW/6KRcrb+Ns=",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\webcil\\Microsoft.AspNetCore.WebUtilities.wasm"
+    },
+    {
       "Identity": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.CSharp.wasm",
       "SourceId": "QuanLyNhaHang_DotNet",
       "SourceType": "Computed",
@@ -773,6 +794,27 @@
       "OriginalItemSpec": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\webcil\\Microsoft.JSInterop.WebAssembly.wasm"
     },
     {
+      "Identity": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.wasm",
+      "SourceId": "QuanLyNhaHang_DotNet",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Net.Http.Headers.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "Fingerprint": "7rvzllyyln",
+      "Integrity": "fSuHnrMTJeC1iF0NPMQqmTs/PfWeybXQ76ddgEDTxFk=",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\webcil\\Microsoft.Net.Http.Headers.wasm"
+    },
+    {
       "Identity": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.VisualBasic.Core.wasm",
       "SourceId": "QuanLyNhaHang_DotNet",
       "SourceType": "Computed",
@@ -913,8 +955,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "0qb56zu3un",
-      "Integrity": "aGNVLANcXNCHLT/DODc0BB97eHUwf3SAmEpWX214tMw=",
+      "Fingerprint": "8f0noalscx",
+      "Integrity": "HM6COF56zZbczWhTxrizxZraisfrU8nb8WbdJU9Owyo=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net8.0\\QuanLyNhaHang_DotNet.pdb"
@@ -934,8 +976,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "cqb2r23v8w",
-      "Integrity": "HCV29Dja5g2A8hyd1q3o/IBMrqbRyaZRwSS2GMgaras=",
+      "Fingerprint": "idhfvejcqf",
+      "Integrity": "SlNmxN52sLD5Pfs1UJ5toqDTWXx7DycdvxoTnx14cgQ=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\webcil\\QuanLyNhaHang_DotNet.wasm"
@@ -5561,7 +5603,7 @@
       "OriginalItemSpec": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Net.NetworkInformation.wasm"
     },
     {
-      "Identity": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\afftlsz70b-d6t07ihav7.gz",
+      "Identity": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\afftlsz70b-2f9m4w07i4.gz",
       "SourceId": "QuanLyNhaHang_DotNet",
       "SourceType": "Computed",
       "ContentRoot": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\",
@@ -5575,8 +5617,8 @@
       "RelatedAsset": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "rp0xyca9et",
-      "Integrity": "33PH3jol7vcg0fN2Oe/OAR8f4GIVtum2vLzVG9f5CJk=",
+      "Fingerprint": "ttvif94djm",
+      "Integrity": "X9thBSCrL//Xj7Aln96UgzFFm0zrrVqMqYCpDy1UbiE=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json"
@@ -6023,7 +6065,7 @@
       "OriginalItemSpec": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Reflection.TypeExtensions.wasm"
     },
     {
-      "Identity": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\eawvad3olj-cqb2r23v8w.gz",
+      "Identity": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\eawvad3olj-idhfvejcqf.gz",
       "SourceId": "QuanLyNhaHang_DotNet",
       "SourceType": "Computed",
       "ContentRoot": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\",
@@ -6037,8 +6079,8 @@
       "RelatedAsset": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\QuanLyNhaHang_DotNet.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "qu80av9zkh",
-      "Integrity": "Ll2TuTnd3EefOSqJqhRI4V/W3PJCCD1sj0QDPnlINGA=",
+      "Fingerprint": "q18avlii9w",
+      "Integrity": "wiXWXK+uLJKxufxK25oakdUsrbPLalfEJW/sgkfKzB8=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\QuanLyNhaHang_DotNet.wasm"
@@ -7682,6 +7724,27 @@
       "OriginalItemSpec": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\mscorlib.wasm"
     },
     {
+      "Identity": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\riyv5s6kpg-7rvzllyyln.gz",
+      "SourceId": "QuanLyNhaHang_DotNet",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Net.Http.Headers.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "dtwh18zgu4",
+      "Integrity": "n04TozTcJNihECZj4q1YvHGfmoG5QRoIFagqIhR22yA=",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.wasm"
+    },
+    {
       "Identity": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\rjj1phva82-mimgke5q6r.gz",
       "SourceId": "QuanLyNhaHang_DotNet",
       "SourceType": "Computed",
@@ -8165,6 +8228,27 @@
       "OriginalItemSpec": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Diagnostics.FileVersionInfo.wasm"
     },
     {
+      "Identity": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\wa81788dqv-4z31k71hq7.gz",
+      "SourceId": "QuanLyNhaHang_DotNet",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.WebUtilities.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "xrse6bek0w",
+      "Integrity": "LTuJ/4p19LcTw6x1qqBaM3Dl9jOsQcD7K3UPTGJAj8E=",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.wasm"
+    },
+    {
       "Identity": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\wfou60k6hl-ugvqo9djln.gz",
       "SourceId": "QuanLyNhaHang_DotNet",
       "SourceType": "Computed",
@@ -8438,7 +8522,7 @@
       "OriginalItemSpec": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Xml.ReaderWriter.wasm"
     },
     {
-      "Identity": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\yd3jelv431-0qb56zu3un.gz",
+      "Identity": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\yd3jelv431-8f0noalscx.gz",
       "SourceId": "QuanLyNhaHang_DotNet",
       "SourceType": "Computed",
       "ContentRoot": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\",
@@ -8452,8 +8536,8 @@
       "RelatedAsset": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\QuanLyNhaHang_DotNet.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "oeyuqfhegl",
-      "Integrity": "sI9bOUtTaABRfn+3/1eguqS07rY70CVTtQqCi4eOkxk=",
+      "Fingerprint": "461tt20yhh",
+      "Integrity": "LLA61gdgWO8Gwdl0s81BIZ9NcZCXHceOT0/W5ER9cDE=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\QuanLyNhaHang_DotNet.pdb"
@@ -8870,7 +8954,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "19781"
+          "Value": "19982"
         },
         {
           "Name": "Content-Type",
@@ -8878,11 +8962,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"tRJ9l7yzXAkwEWDUBxemGwF+NvwxKB0MRlcWEKDRm9g=\""
+          "Value": "\"Lp0AUTUGxetJ9hEbFF1ILqVdg+fdiEv9GzUWUR0Vxn0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 13 Jun 2026 07:55:57 GMT"
+          "Value": "Sun, 14 Jun 2026 03:06:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8892,18 +8976,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-tRJ9l7yzXAkwEWDUBxemGwF+NvwxKB0MRlcWEKDRm9g="
+          "Value": "sha256-Lp0AUTUGxetJ9hEbFF1ILqVdg+fdiEv9GzUWUR0Vxn0="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json",
-      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\afftlsz70b-d6t07ihav7.gz",
+      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\afftlsz70b-2f9m4w07i4.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000112435350"
+          "Quality": "0.000111333779"
         }
       ],
       "ResponseHeaders": [
@@ -8913,15 +8997,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8893"
+          "Value": "8981"
         },
         {
           "Name": "ETag",
-          "Value": "\"33PH3jol7vcg0fN2Oe/OAR8f4GIVtum2vLzVG9f5CJk=\""
+          "Value": "\"X9thBSCrL//Xj7Aln96UgzFFm0zrrVqMqYCpDy1UbiE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 13 Jun 2026 07:48:38 GMT"
+          "Value": "Sun, 14 Jun 2026 02:48:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8941,19 +9025,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"tRJ9l7yzXAkwEWDUBxemGwF+NvwxKB0MRlcWEKDRm9g=\""
+          "Value": "W/\"Lp0AUTUGxetJ9hEbFF1ILqVdg+fdiEv9GzUWUR0Vxn0=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-tRJ9l7yzXAkwEWDUBxemGwF+NvwxKB0MRlcWEKDRm9g="
+          "Value": "sha256-Lp0AUTUGxetJ9hEbFF1ILqVdg+fdiEv9GzUWUR0Vxn0="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.gz",
-      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\afftlsz70b-d6t07ihav7.gz",
+      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\afftlsz70b-2f9m4w07i4.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -8962,7 +9046,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "8893"
+          "Value": "8981"
         },
         {
           "Name": "Content-Type",
@@ -8970,11 +9054,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"33PH3jol7vcg0fN2Oe/OAR8f4GIVtum2vLzVG9f5CJk=\""
+          "Value": "\"X9thBSCrL//Xj7Aln96UgzFFm0zrrVqMqYCpDy1UbiE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 13 Jun 2026 07:48:38 GMT"
+          "Value": "Sun, 14 Jun 2026 02:48:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -8992,7 +9076,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-33PH3jol7vcg0fN2Oe/OAR8f4GIVtum2vLzVG9f5CJk="
+          "Value": "sha256-X9thBSCrL//Xj7Aln96UgzFFm0zrrVqMqYCpDy1UbiE="
         }
       ]
     },
@@ -11463,6 +11547,143 @@
       ]
     },
     {
+      "Route": "_framework/Microsoft.AspNetCore.WebUtilities.wasm",
+      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.wasm",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "95509"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YCpj1LNQpMxfSKDSryT0Eyy1Pwf6AvZTW/6KRcrb+Ns=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Jun 2026 12:43:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YCpj1LNQpMxfSKDSryT0Eyy1Pwf6AvZTW/6KRcrb+Ns="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Microsoft.AspNetCore.WebUtilities.wasm",
+      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\wa81788dqv-4z31k71hq7.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000024866343"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "40214"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LTuJ/4p19LcTw6x1qqBaM3Dl9jOsQcD7K3UPTGJAj8E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Jun 2026 12:43:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"YCpj1LNQpMxfSKDSryT0Eyy1Pwf6AvZTW/6KRcrb+Ns=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YCpj1LNQpMxfSKDSryT0Eyy1Pwf6AvZTW/6KRcrb+Ns="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Microsoft.AspNetCore.WebUtilities.wasm.gz",
+      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\wa81788dqv-4z31k71hq7.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "40214"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LTuJ/4p19LcTw6x1qqBaM3Dl9jOsQcD7K3UPTGJAj8E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Jun 2026 12:43:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LTuJ/4p19LcTw6x1qqBaM3Dl9jOsQcD7K3UPTGJAj8E="
+        }
+      ]
+    },
+    {
       "Route": "_framework/Microsoft.CSharp.wasm",
       "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.CSharp.wasm",
       "Selectors": [],
@@ -13792,6 +14013,143 @@
       ]
     },
     {
+      "Route": "_framework/Microsoft.Net.Http.Headers.wasm",
+      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.wasm",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "74005"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fSuHnrMTJeC1iF0NPMQqmTs/PfWeybXQ76ddgEDTxFk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Jun 2026 12:43:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fSuHnrMTJeC1iF0NPMQqmTs/PfWeybXQ76ddgEDTxFk="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Microsoft.Net.Http.Headers.wasm",
+      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\riyv5s6kpg-7rvzllyyln.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000030683317"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32590"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"n04TozTcJNihECZj4q1YvHGfmoG5QRoIFagqIhR22yA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Jun 2026 12:43:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"fSuHnrMTJeC1iF0NPMQqmTs/PfWeybXQ76ddgEDTxFk=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fSuHnrMTJeC1iF0NPMQqmTs/PfWeybXQ76ddgEDTxFk="
+        }
+      ]
+    },
+    {
+      "Route": "_framework/Microsoft.Net.Http.Headers.wasm.gz",
+      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\riyv5s6kpg-7rvzllyyln.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "32590"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/wasm"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"n04TozTcJNihECZj4q1YvHGfmoG5QRoIFagqIhR22yA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 13 Jun 2026 12:43:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-n04TozTcJNihECZj4q1YvHGfmoG5QRoIFagqIhR22yA="
+        }
+      ]
+    },
+    {
       "Route": "_framework/Microsoft.VisualBasic.Core.wasm",
       "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.VisualBasic.Core.wasm",
       "Selectors": [],
@@ -14624,7 +14982,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "118012"
+          "Value": "125520"
         },
         {
           "Name": "Content-Type",
@@ -14632,11 +14990,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"aGNVLANcXNCHLT/DODc0BB97eHUwf3SAmEpWX214tMw=\""
+          "Value": "\"HM6COF56zZbczWhTxrizxZraisfrU8nb8WbdJU9Owyo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 13 Jun 2026 07:55:56 GMT"
+          "Value": "Sun, 14 Jun 2026 03:06:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14646,18 +15004,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-aGNVLANcXNCHLT/DODc0BB97eHUwf3SAmEpWX214tMw="
+          "Value": "sha256-HM6COF56zZbczWhTxrizxZraisfrU8nb8WbdJU9Owyo="
         }
       ]
     },
     {
       "Route": "_framework/QuanLyNhaHang_DotNet.pdb",
-      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\yd3jelv431-0qb56zu3un.gz",
+      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\yd3jelv431-8f0noalscx.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000010963590"
+          "Quality": "0.000010633094"
         }
       ],
       "ResponseHeaders": [
@@ -14667,15 +15025,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "91210"
+          "Value": "94045"
         },
         {
           "Name": "ETag",
-          "Value": "\"sI9bOUtTaABRfn+3/1eguqS07rY70CVTtQqCi4eOkxk=\""
+          "Value": "\"LLA61gdgWO8Gwdl0s81BIZ9NcZCXHceOT0/W5ER9cDE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 13 Jun 2026 07:48:38 GMT"
+          "Value": "Sun, 14 Jun 2026 02:48:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14695,19 +15053,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"aGNVLANcXNCHLT/DODc0BB97eHUwf3SAmEpWX214tMw=\""
+          "Value": "W/\"HM6COF56zZbczWhTxrizxZraisfrU8nb8WbdJU9Owyo=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-aGNVLANcXNCHLT/DODc0BB97eHUwf3SAmEpWX214tMw="
+          "Value": "sha256-HM6COF56zZbczWhTxrizxZraisfrU8nb8WbdJU9Owyo="
         }
       ]
     },
     {
       "Route": "_framework/QuanLyNhaHang_DotNet.pdb.gz",
-      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\yd3jelv431-0qb56zu3un.gz",
+      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\yd3jelv431-8f0noalscx.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -14716,7 +15074,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "91210"
+          "Value": "94045"
         },
         {
           "Name": "Content-Type",
@@ -14724,11 +15082,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"sI9bOUtTaABRfn+3/1eguqS07rY70CVTtQqCi4eOkxk=\""
+          "Value": "\"LLA61gdgWO8Gwdl0s81BIZ9NcZCXHceOT0/W5ER9cDE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 13 Jun 2026 07:48:38 GMT"
+          "Value": "Sun, 14 Jun 2026 02:48:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14746,7 +15104,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-sI9bOUtTaABRfn+3/1eguqS07rY70CVTtQqCi4eOkxk="
+          "Value": "sha256-LLA61gdgWO8Gwdl0s81BIZ9NcZCXHceOT0/W5ER9cDE="
         }
       ]
     },
@@ -14761,7 +15119,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "216341"
+          "Value": "232213"
         },
         {
           "Name": "Content-Type",
@@ -14769,11 +15127,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"HCV29Dja5g2A8hyd1q3o/IBMrqbRyaZRwSS2GMgaras=\""
+          "Value": "\"SlNmxN52sLD5Pfs1UJ5toqDTWXx7DycdvxoTnx14cgQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 13 Jun 2026 07:55:56 GMT"
+          "Value": "Sun, 14 Jun 2026 02:48:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14783,18 +15141,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-HCV29Dja5g2A8hyd1q3o/IBMrqbRyaZRwSS2GMgaras="
+          "Value": "sha256-SlNmxN52sLD5Pfs1UJ5toqDTWXx7DycdvxoTnx14cgQ="
         }
       ]
     },
     {
       "Route": "_framework/QuanLyNhaHang_DotNet.wasm",
-      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\eawvad3olj-cqb2r23v8w.gz",
+      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\eawvad3olj-idhfvejcqf.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000013811964"
+          "Quality": "0.000013476181"
         }
       ],
       "ResponseHeaders": [
@@ -14804,15 +15162,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "72400"
+          "Value": "74204"
         },
         {
           "Name": "ETag",
-          "Value": "\"Ll2TuTnd3EefOSqJqhRI4V/W3PJCCD1sj0QDPnlINGA=\""
+          "Value": "\"wiXWXK+uLJKxufxK25oakdUsrbPLalfEJW/sgkfKzB8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 13 Jun 2026 07:48:38 GMT"
+          "Value": "Sun, 14 Jun 2026 02:48:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14832,19 +15190,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"HCV29Dja5g2A8hyd1q3o/IBMrqbRyaZRwSS2GMgaras=\""
+          "Value": "W/\"SlNmxN52sLD5Pfs1UJ5toqDTWXx7DycdvxoTnx14cgQ=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-HCV29Dja5g2A8hyd1q3o/IBMrqbRyaZRwSS2GMgaras="
+          "Value": "sha256-SlNmxN52sLD5Pfs1UJ5toqDTWXx7DycdvxoTnx14cgQ="
         }
       ]
     },
     {
       "Route": "_framework/QuanLyNhaHang_DotNet.wasm.gz",
-      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\eawvad3olj-cqb2r23v8w.gz",
+      "AssetFile": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\obj\\Debug\\net8.0\\compressed\\eawvad3olj-idhfvejcqf.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -14853,7 +15211,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "72400"
+          "Value": "74204"
         },
         {
           "Name": "Content-Type",
@@ -14861,11 +15219,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Ll2TuTnd3EefOSqJqhRI4V/W3PJCCD1sj0QDPnlINGA=\""
+          "Value": "\"wiXWXK+uLJKxufxK25oakdUsrbPLalfEJW/sgkfKzB8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 13 Jun 2026 07:48:38 GMT"
+          "Value": "Sun, 14 Jun 2026 02:48:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -14883,7 +15241,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Ll2TuTnd3EefOSqJqhRI4V/W3PJCCD1sj0QDPnlINGA="
+          "Value": "sha256-wiXWXK+uLJKxufxK25oakdUsrbPLalfEJW/sgkfKzB8="
         }
       ]
     },

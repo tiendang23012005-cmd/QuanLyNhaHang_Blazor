@@ -3,8 +3,60 @@
   "WorkspaceRootPath": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\pages\\customermenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\pages\\customermenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\pages\\auth\\googleresult.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\pages\\auth\\googleresult.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\pages\\auth\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\pages\\auth\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\quanlynhahang_dotnet.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\quanlynhahang_dotnet.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\infrastructure\\jwtauthorizationmessagehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\infrastructure\\jwtauthorizationmessagehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\pages\\admin\\usermanagement.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\pages\\admin\\usermanagement.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\pages\\paymentsuccess.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\pages\\paymentsuccess.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\pages\\paymentfailed.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\pages\\paymentfailed.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\pages\\admin\\usermanagement.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -13,10 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\pages\\staff\\staffdashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\pages\\staff\\staffdashboard.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\layout\\adminlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -39,10 +87,6 @@
       "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\pages\\admin\\tablemanagement.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\pages\\auth\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\pages\\auth\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\infrastructure\\customauthstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\infrastructure\\customauthstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -59,32 +103,8 @@
       "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\layout\\authlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\pages\\customermenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\pages\\customermenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\shared\\header.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\shared\\header.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\infrastructure\\jwtauthorizationmessagehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\infrastructure\\jwtauthorizationmessagehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -103,16 +123,8 @@
       "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\models\\authmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\pages\\paymentsuccess.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\pages\\paymentsuccess.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\services\\nhanvienservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\services\\nhanvienservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\quanlynhahang_dotnet.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|solutionrelative:quanlynhahang_dotnet\\quanlynhahang_dotnet.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EC253654-E324-4BF0-B933-5E6D4B238E64}|QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj|d:\\c_vscode_tim\\quanlynhahang_blazor\\quanlynhahang_dotnet\\models\\nhanvienmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -178,7 +190,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -198,58 +210,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AdminLayout.razor",
-              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Layout\\AdminLayout.razor",
-              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Layout\\AdminLayout.razor",
-              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Layout\\AdminLayout.razor",
-              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Layout\\AdminLayout.razor",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAQwHIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-12T16:30:44.103Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserManagement.razor",
-              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Admin\\UserManagement.razor",
-              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Pages\\Admin\\UserManagement.razor",
-              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Admin\\UserManagement.razor",
-              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Pages\\Admin\\UserManagement.razor",
-              "ViewState": "AgIAAC4BAAAAAAAAAAAQwFoBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-13T02:42:38.074Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AdminLayout.razor.css",
-              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Layout\\AdminLayout.razor.css",
-              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Layout\\AdminLayout.razor.css",
-              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Layout\\AdminLayout.razor.css",
-              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Layout\\AdminLayout.razor.css",
-              "ViewState": "AgIAAGoBAAAAAAAAAAAgwI0BAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-06-12T16:32:43.14Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserManagement.razor.css",
-              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Admin\\UserManagement.razor.css",
-              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Pages\\Admin\\UserManagement.razor.css",
-              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Admin\\UserManagement.razor.css",
-              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Pages\\Admin\\UserManagement.razor.css",
-              "ViewState": "AgIAAOcAAAAAAAAAAAAgwAoBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-06-13T02:43:03.008Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Counter.razor",
               "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Counter.razor",
@@ -263,124 +223,81 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "StaffDashboard.razor",
-              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Staff\\StaffDashboard.razor",
-              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Pages\\Staff\\StaffDashboard.razor",
-              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Staff\\StaffDashboard.razor",
-              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Pages\\Staff\\StaffDashboard.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAA9AAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "PaymentSuccess.razor",
+              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\PaymentSuccess.razor",
+              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Pages\\PaymentSuccess.razor",
+              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\PaymentSuccess.razor",
+              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Pages\\PaymentSuccess.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-13T03:41:24.915Z",
+              "WhenOpened": "2026-06-13T06:00:27.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Program.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Program.cs",
+              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Program.cs",
+              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Program.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACMAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-13T15:35:05.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Services\\AuthService.cs",
+              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Services\\AuthService.cs",
+              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Services\\AuthService.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAwwDgAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T15:45:36.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\_Imports.razor",
+              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\_Imports.razor",
+              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\_Imports.razor",
+              "RelativeToolTip": "QuanLyNhaHang_DotNet\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-12T15:47:03.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GoogleResult.razor",
+              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Auth\\GoogleResult.razor",
+              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Pages\\Auth\\GoogleResult.razor",
+              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Auth\\GoogleResult.razor",
+              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Pages\\Auth\\GoogleResult.razor",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAA0AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-13T12:27:21.48Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "FoodManagement.razor",
-              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Admin\\FoodManagement.razor",
-              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Pages\\Admin\\FoodManagement.razor",
-              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Admin\\FoodManagement.razor",
-              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Pages\\Admin\\FoodManagement.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-13T03:13:35.531Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "TableManagement.razor",
-              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Admin\\TableManagement.razor",
-              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Pages\\Admin\\TableManagement.razor",
-              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Admin\\TableManagement.razor",
-              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Pages\\Admin\\TableManagement.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-13T02:59:26.255Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "Login.razor",
               "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Auth\\Login.razor",
               "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Pages\\Auth\\Login.razor",
               "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Auth\\Login.razor",
               "RelativeToolTip": "QuanLyNhaHang_DotNet\\Pages\\Auth\\Login.razor",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAQwH4AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAUwJMAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-12T16:48:48.351Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-12T16:48:48.351Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CustomAuthStateProvider.cs",
-              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Infrastructure\\CustomAuthStateProvider.cs",
-              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Infrastructure\\CustomAuthStateProvider.cs",
-              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Infrastructure\\CustomAuthStateProvider.cs",
-              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Infrastructure\\CustomAuthStateProvider.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAuwCkAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T15:46:45.932Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Revenue.razor",
-              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Admin\\Revenue.razor",
-              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Pages\\Admin\\Revenue.razor",
-              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Admin\\Revenue.razor",
-              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Pages\\Admin\\Revenue.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-13T03:18:43.282Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MainLayout.razor",
-              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Layout\\MainLayout.razor",
-              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Layout\\MainLayout.razor",
-              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Layout\\MainLayout.razor",
-              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Layout\\MainLayout.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-13T03:53:53.169Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "NavMenu.razor",
-              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Layout\\NavMenu.razor",
-              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Layout\\NavMenu.razor",
-              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Layout\\NavMenu.razor",
-              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Layout\\NavMenu.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-12T14:42:59.272Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AuthLayout.razor",
-              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Layout\\AuthLayout.razor",
-              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Layout\\AuthLayout.razor",
-              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Layout\\AuthLayout.razor",
-              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Layout\\AuthLayout.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-13T03:52:08.106Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 1,
               "Title": "CustomerMenu.razor",
               "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\CustomerMenu.razor",
               "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Pages\\CustomerMenu.razor",
@@ -393,20 +310,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Header.razor",
-              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Shared\\Header.razor",
-              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Shared\\Header.razor",
-              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Shared\\Header.razor",
-              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Shared\\Header.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-13T05:39:05.957Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 4,
               "Title": "App.razor",
               "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\App.razor",
               "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\App.razor",
@@ -419,57 +323,211 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 8,
+              "Title": "QuanLyNhaHang_DotNet.csproj",
+              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj",
+              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj",
+              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj",
+              "RelativeToolTip": "QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-12T16:10:18.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "JwtAuthorizationMessageHandler.cs",
               "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Infrastructure\\JwtAuthorizationMessageHandler.cs",
               "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Infrastructure\\JwtAuthorizationMessageHandler.cs",
               "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Infrastructure\\JwtAuthorizationMessageHandler.cs",
               "RelativeToolTip": "QuanLyNhaHang_DotNet\\Infrastructure\\JwtAuthorizationMessageHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T15:46:32.311Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-12T15:46:32.311Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Services\\AuthService.cs",
-              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Services\\AuthService.cs",
-              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Services\\AuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T15:45:36.745Z"
+              "DocumentIndex": 15,
+              "Title": "StaffDashboard.razor",
+              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Staff\\StaffDashboard.razor",
+              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Pages\\Staff\\StaffDashboard.razor",
+              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Staff\\StaffDashboard.razor",
+              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Pages\\Staff\\StaffDashboard.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-13T03:41:24.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "index.html",
+              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\wwwroot\\index.html",
+              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\wwwroot\\index.html",
+              "RelativeToolTip": "QuanLyNhaHang_DotNet\\wwwroot\\index.html",
+              "ViewState": "AgIAABAAAAAAAAAAAABBwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-06-13T15:03:25.529Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PaymentFailed.razor",
+              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\PaymentFailed.razor",
+              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Pages\\PaymentFailed.razor",
+              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\PaymentFailed.razor",
+              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Pages\\PaymentFailed.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-13T13:27:57.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserManagement.razor.css",
+              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Admin\\UserManagement.razor.css",
+              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Pages\\Admin\\UserManagement.razor.css",
+              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Admin\\UserManagement.razor.css",
+              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Pages\\Admin\\UserManagement.razor.css",
+              "ViewState": "AgIAAOcAAAAAAAAAAAAgwAoBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-06-13T02:43:03.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AdminLayout.razor.css",
+              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Layout\\AdminLayout.razor.css",
+              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Layout\\AdminLayout.razor.css",
+              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Layout\\AdminLayout.razor.css",
+              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Layout\\AdminLayout.razor.css",
+              "ViewState": "AgIAAGoBAAAAAAAAAAAgwI0BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-06-12T16:32:43.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserManagement.razor",
+              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Admin\\UserManagement.razor",
+              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Pages\\Admin\\UserManagement.razor",
+              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Admin\\UserManagement.razor",
+              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Pages\\Admin\\UserManagement.razor",
+              "ViewState": "AgIAAC4BAAAAAAAAAAAQwFoBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-13T02:42:38.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AdminLayout.razor",
+              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Layout\\AdminLayout.razor",
+              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Layout\\AdminLayout.razor",
+              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Layout\\AdminLayout.razor",
+              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Layout\\AdminLayout.razor",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAQwHIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-12T16:30:44.103Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Program.cs",
-              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Program.cs",
-              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Program.cs",
-              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Program.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAwwDMAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-12T15:47:42.913Z",
-              "EditorCaption": ""
+              "Title": "FoodManagement.razor",
+              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Admin\\FoodManagement.razor",
+              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Pages\\Admin\\FoodManagement.razor",
+              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Admin\\FoodManagement.razor",
+              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Pages\\Admin\\FoodManagement.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-13T03:13:35.531Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
-              "Title": "_Imports.razor",
-              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\_Imports.razor",
-              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\_Imports.razor",
-              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\_Imports.razor",
-              "RelativeToolTip": "QuanLyNhaHang_DotNet\\_Imports.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Title": "TableManagement.razor",
+              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Admin\\TableManagement.razor",
+              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Pages\\Admin\\TableManagement.razor",
+              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Admin\\TableManagement.razor",
+              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Pages\\Admin\\TableManagement.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-12T15:47:03.52Z"
+              "WhenOpened": "2026-06-13T02:59:26.255Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
+              "Title": "CustomAuthStateProvider.cs",
+              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Infrastructure\\CustomAuthStateProvider.cs",
+              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Infrastructure\\CustomAuthStateProvider.cs",
+              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Infrastructure\\CustomAuthStateProvider.cs",
+              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Infrastructure\\CustomAuthStateProvider.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAuwCkAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T15:46:45.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Revenue.razor",
+              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Admin\\Revenue.razor",
+              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Pages\\Admin\\Revenue.razor",
+              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Admin\\Revenue.razor",
+              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Pages\\Admin\\Revenue.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-13T03:18:43.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Layout\\MainLayout.razor",
+              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-13T03:53:53.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Layout\\NavMenu.razor",
+              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-12T14:42:59.272Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AuthLayout.razor",
+              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Layout\\AuthLayout.razor",
+              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Layout\\AuthLayout.razor",
+              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Layout\\AuthLayout.razor",
+              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Layout\\AuthLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-13T03:52:08.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Header.razor",
+              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Shared\\Header.razor",
+              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Shared\\Header.razor",
+              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Shared\\Header.razor",
+              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Shared\\Header.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-13T05:39:05.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
               "Title": "Home.razor",
               "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Home.razor",
               "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Pages\\Home.razor",
@@ -481,7 +539,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 27,
               "Title": "MainLayout.razor.css",
               "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Layout\\MainLayout.razor.css",
               "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Layout\\MainLayout.razor.css",
@@ -493,7 +551,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "NhanVienService.cs",
               "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Services\\NhanVienService.cs",
               "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Services\\NhanVienService.cs",
@@ -505,7 +563,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 28,
               "Title": "OrderModels.cs",
               "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Models\\OrderModels.cs",
               "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Models\\OrderModels.cs",
@@ -517,7 +575,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 29,
               "Title": "AuthModels.cs",
               "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Models\\AuthModels.cs",
               "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Models\\AuthModels.cs",
@@ -529,19 +587,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "PaymentSuccess.razor",
-              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\PaymentSuccess.razor",
-              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Pages\\PaymentSuccess.razor",
-              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\PaymentSuccess.razor",
-              "RelativeToolTip": "QuanLyNhaHang_DotNet\\Pages\\PaymentSuccess.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-13T06:00:27.97Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "StaffDashboard.razor.css",
               "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Staff\\StaffDashboard.razor.css",
               "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Pages\\Staff\\StaffDashboard.razor.css",
@@ -553,19 +599,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "QuanLyNhaHang_DotNet.csproj",
-              "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj",
-              "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj",
-              "ToolTip": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj",
-              "RelativeToolTip": "QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-06-12T16:10:18.501Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "NhanVienModels.cs",
               "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Models\\NhanVienModels.cs",
               "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Models\\NhanVienModels.cs",
@@ -577,7 +611,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "LoginRequest.cs",
               "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Models\\LoginRequest.cs",
               "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Models\\LoginRequest.cs",
@@ -589,7 +623,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 34,
               "Title": "RegisterRequest.cs",
               "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Models\\RegisterRequest.cs",
               "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Models\\RegisterRequest.cs",
@@ -601,7 +635,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 33,
               "Title": "FoodManagementModels.cs",
               "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Models\\FoodManagementModels.cs",
               "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Models\\FoodManagementModels.cs",
@@ -613,7 +647,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "Register.razor",
               "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Auth\\Register.razor",
               "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Pages\\Auth\\Register.razor",
@@ -625,7 +659,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "Revenue.razor.css",
               "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Admin\\Revenue.razor.css",
               "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Pages\\Admin\\Revenue.razor.css",
@@ -637,7 +671,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "FoodManagement.razor.css",
               "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Admin\\FoodManagement.razor.css",
               "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Pages\\Admin\\FoodManagement.razor.css",
@@ -649,7 +683,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "RevenueModels.cs",
               "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Models\\RevenueModels.cs",
               "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Models\\RevenueModels.cs",
@@ -661,7 +695,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "TableManagementModels.cs",
               "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Models\\TableManagementModels.cs",
               "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Models\\TableManagementModels.cs",
@@ -673,7 +707,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 42,
               "Title": "TableManagement.razor.css",
               "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Admin\\TableManagement.razor.css",
               "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Pages\\Admin\\TableManagement.razor.css",
@@ -685,7 +719,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 41,
               "Title": "UserManagementModels.cs",
               "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Models\\UserManagementModels.cs",
               "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Models\\UserManagementModels.cs",
@@ -697,7 +731,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "Login.razor.css",
               "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Auth\\Login.razor.css",
               "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Pages\\Auth\\Login.razor.css",
@@ -709,7 +743,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 44,
               "Title": "Register.razor.css",
               "DocumentMoniker": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\Pages\\Auth\\Register.razor.css",
               "RelativeDocumentMoniker": "QuanLyNhaHang_DotNet\\Pages\\Auth\\Register.razor.css",

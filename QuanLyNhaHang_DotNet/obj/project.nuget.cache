@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "87cpNDSgFGA=",
+  "dgSpecHash": "5jqMGObHgpM=",
   "success": true,
   "projectFilePath": "D:\\C_vscode_tim\\QuanLyNhaHang_Blazor\\QuanLyNhaHang_DotNet\\QuanLyNhaHang_DotNet.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "C:\\Users\\VAN TIEN\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\8.0.13\\microsoft.aspnetcore.components.webassembly.8.0.13.nupkg.sha512",
     "C:\\Users\\VAN TIEN\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.devserver\\8.0.13\\microsoft.aspnetcore.components.webassembly.devserver.8.0.13.nupkg.sha512",
     "C:\\Users\\VAN TIEN\\.nuget\\packages\\microsoft.aspnetcore.metadata\\8.0.13\\microsoft.aspnetcore.metadata.8.0.13.nupkg.sha512",
+    "C:\\Users\\VAN TIEN\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\8.0.0\\microsoft.aspnetcore.webutilities.8.0.0.nupkg.sha512",
     "C:\\Users\\VAN TIEN\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\VAN TIEN\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\VAN TIEN\\.nuget\\packages\\microsoft.extensions.configuration.binder\\8.0.2\\microsoft.extensions.configuration.binder.8.0.2.nupkg.sha512",
@@ -29,6 +30,7 @@
     "C:\\Users\\VAN TIEN\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "C:\\Users\\VAN TIEN\\.nuget\\packages\\microsoft.jsinterop\\8.0.13\\microsoft.jsinterop.8.0.13.nupkg.sha512",
     "C:\\Users\\VAN TIEN\\.nuget\\packages\\microsoft.jsinterop.webassembly\\8.0.13\\microsoft.jsinterop.webassembly.8.0.13.nupkg.sha512",
+    "C:\\Users\\VAN TIEN\\.nuget\\packages\\microsoft.net.http.headers\\8.0.0\\microsoft.net.http.headers.8.0.0.nupkg.sha512",
     "C:\\Users\\VAN TIEN\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.13\\microsoft.net.illink.tasks.8.0.13.nupkg.sha512",
     "C:\\Users\\VAN TIEN\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\9.0.2\\microsoft.net.sdk.webassembly.pack.9.0.2.nupkg.sha512",
     "C:\\Users\\VAN TIEN\\.nuget\\packages\\system.io.pipelines\\8.0.0\\system.io.pipelines.8.0.0.nupkg.sha512",
